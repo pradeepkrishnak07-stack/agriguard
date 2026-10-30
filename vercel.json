@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd AGRIGUARD/frontend && npm install && npm run build",
+  "outputDirectory": "AGRIGUARD/frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+

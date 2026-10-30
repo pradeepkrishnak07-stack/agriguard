@@ -1,0 +1,11 @@
+{
+  "name": "agriguard-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix AGRIGUARD/frontend run dev",
+    "start": "npm --prefix AGRIGUARD/frontend run dev",
+    "build": "npm --prefix AGRIGUARD/frontend run build",
+    "frontend": "npm --prefix AGRIGUARD/frontend run dev"
+  }
+}

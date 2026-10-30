@@ -1,0 +1,83 @@
+# ==============================================================================
+# AGRIGUARD — Git Ignore Configuration
+# Protects secrets, credentials, large binaries, datasets, and build artifacts
+# ==============================================================================
+
+# ----------------- Environment Variables & Secrets -----------------
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.cert
+*.crt
+secrets.json
+
+# ----------------- Large Datasets & Archives (> 100 MB GitHub limit) -----------------
+**/dataset/**
+PlantVillage-Dataset-master/
+PlantVillage-Dataset-master.zip
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ----------------- Runtime User Data & Private Credentials -----------------
+**/data_storage/*.json
+**/data_storage/*.json.bak
+**/data_storage/*.tmp.*
+**/data_storage/tts_cache/**
+!**/data_storage/.gitkeep
+**/tts_cache/**
+*.mp3
+*.wav
+
+# ----------------- Python Virtual Environments & Bytecode -----------------
+**/venv/**
+**/env/**
+**/ENV/**
+**/.venv/**
+**/__pycache__/**
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ----------------- Node.js & Frontend Build Artifacts -----------------
+**/node_modules/**
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+**/dist/**
+dist-ssr/
+*.local
+.vite/
+
+# ----------------- OS & Editor Temporary Files -----------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

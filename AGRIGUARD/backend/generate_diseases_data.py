@@ -1,0 +1,2301 @@
+"""
+Structured disease knowledge definitions for all 38 PlantVillage classes + existing AGRIGUARD crops.
+Source-backed from ICAR, TNAU Agritech Portal, CIBRC product labels, and State Agricultural Universities.
+"""
+
+DISEASES_DICT = {
+    # -------------------------------------------------------------
+    # CORN / MAIZE (4 classes)
+    # -------------------------------------------------------------
+    "corn_cercospora_leaf_spot": {
+        "id": "corn_cercospora_leaf_spot",
+        "crop_id": "corn",
+        "name_en": "Corn Gray Leaf Spot (Cercospora)",
+        "name_ta": "மக்காச்சோள சாம்பல் இலைப்புள்ளி நோய்",
+        "name_hi": "मक्का का ग्रे लीफ स्पॉट रोग",
+        "pathogen": "Cercospora zeae-maydis (Fungus)",
+        "symptoms_en": [
+            "Small, tan spots with yellow halos that elongate into rectangular, narrow brown lesions delimited by leaf veins.",
+            "Lesions expand to 1.5 to 6 cm in length, giving mature leaves a striped, blighted appearance.",
+            "Severe blight causes extensive premature canopy death and stalk lodging."
+        ],
+        "symptoms_ta": [
+            "இலை நரம்புகளுக்கு இடையே செவ்வக வடிவ சாம்பல்-பழுப்பு நிற புள்ளிகள் தோன்றும்.",
+            "புள்ளிகள் நீளவாக்கில் விரிவடைந்து இலை முழுவதும் கருகிய தோற்றத்தை உண்டாக்கும்.",
+            "தீவிர பாதிப்பில் இலைகள் காய்ந்து தண்டு சாய்ந்து மகசூல் பெருமளவு குறையும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों की नसों के बीच आयताकार भूरे धब्बे बनते हैं।",
+            "धब्बे आपस में मिलकर पूरी पत्ती को झुलसा देते हैं।",
+            "गंभीर स्थिति में पत्तियां समय से पहले सूख जाती हैं और तना गिर जाता है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm temperatures (24-30°C) with persistent high relative humidity (>90%) and frequent overcast dew spells.",
+            "description_ta": "மிதமான வெப்பம் (24-30°C) மற்றும் தொடர் காற்றில் ஈரப்பதம் (90% மேல்)."
+        },
+        "prevention_en": [
+            "Plant certified Gray Leaf Spot-tolerant maize hybrids.",
+            "Deep plow infected stubble or practice 2-year rotation with non-host crops like soybean or groundnut.",
+            "Avoid excessive nitrogen application and maintain balanced potash nutrition to strengthen stalk rind."
+        ],
+        "prevention_ta": [
+            "நோய் எதிர்ப்புத் திறன் கொண்ட மக்காச்சோள கலப்பின விதைகளைப் பயன்படுத்தவும்.",
+            "அறுவடைக்கு பின் முந்தைய பயிர்க் கழிவுகளை ஆழமாக உழுது அழிக்கவும்; மாற்றுப் பயிர் சுழற்சி செய்யவும்.",
+            "சீரான சாம்பல் சத்து இட்டு தண்டு வலிமையை அதிகரிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar application of Pseudomonas fluorescens @ 5 g/L or Trichoderma harzianum @ 5 g/L at knee-high stage.",
+            "Chemical IPM (TNAU / ICAR): Spray Azoxystrobin 18.2% + Difenoconazole 11.4% SC @ 1 ml/L (200 ml/acre) or Pyraclostrobin 20% WG @ 1 g/L. Apply at first sign of rectangular lesions.",
+            "Ensure complete coverage of lower leaves where infection initiates."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: சூடோமோனாஸ் புளோரசன்ஸ் 5 கிராம்/லிட்டர் நீரில் கலந்து முழங்கால் உயரப் பருவத்தில் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU / ICAR): அசோக்சிஸ்ட்ரோபின் + டைபினோகொனசோல் (18.2% + 11.4% SC) 1 மி.லி/லிட்டர் (ஏக்கருக்கு 200 மி.லி) அல்லது மேன்கோசெப் 2 கிராம்/லிட்டர் நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 200.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "If rectangular lesions reach the ear leaf or higher before silking, spray immediately to protect grain filling.",
+        "expert_advice_ta": "கதிர் வெளிவரும் பருவத்தில் கதிர் இலைக்கு மேல் நோய் பரவினால் உடனே பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லியை தெளிக்கவும்.",
+        "source_title": "ICAR-Indian Institute of Maize Research (IIMR) Disease Management Guide",
+        "source_org": "ICAR-IIMR & TNAU Agritech Portal",
+        "reference": "ICAR-IIMR Corn Pathology Guidelines & TNAU Maize Crop Protection Manual",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "corn_common_rust": {
+        "id": "corn_common_rust",
+        "crop_id": "corn",
+        "name_en": "Corn Common Rust (Puccinia sorghi)",
+        "name_ta": "மக்காச்சோள துரு நோய்",
+        "name_hi": "मक्का का सामान्य रतुआ (रस्ट) रोग",
+        "pathogen": "Puccinia sorghi (Fungus)",
+        "symptoms_en": [
+            "Small, circular to elongate golden-brown to cinnamon-brown powdery pustules (uredinia) scattered on both upper and lower leaf surfaces.",
+            "Pustules rupture the leaf epidermis, releasing reddish-brown airborne urediniospores.",
+            "Infected leaves turn yellow, chlorotic, and dry prematurely under heavy disease pressure."
+        ],
+        "symptoms_ta": [
+            "இலையின் இருபுறமும் செம்பழுப்பு அல்லது துரு போன்ற துகள்கள் நிறைந்த கொப்புளங்கள் தோன்றும்.",
+            "கொப்புளங்கள் வெடித்து செம்பழுப்பு நிற வித்துக்கள் வெளியேறும்.",
+            "பாதிக்கப்பட்ட இலைகள் மஞ்சள் நிறமாகி காய்ந்து உதிரும்."
+        ],
+        "symptoms_hi": [
+            "पत्ती की दोनों सतहों पर लाल-भूरे रंग के उभरे हुए चूर्ण जैसे फफोले (पस्ट्यूल्स) बनते हैं।",
+            "फफोले फटने पर भूरे रंग का पाउडर निकलता है।",
+            "पत्तियां पीली पड़कर सूखने लगती हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Cool to moderate temperatures (16-24°C) with high relative humidity (>95%) and 6 hours of continuous dew.",
+            "description_ta": "குளிர்ந்த இரவு தட்பவெப்பநிலை (16-24°C) மற்றும் அதிக பனிப்பொழிவு."
+        },
+        "prevention_en": [
+            "Use rust-resistant hybrid varieties suited for winter and rabi sowing.",
+            "Plant early to escape peak cool humid weather conducive for spore germination.",
+            "Maintain optimal plant spacing to allow sun penetration and rapid leaf drying."
+        ],
+        "prevention_ta": [
+            "துரு நோய் எதிர்ப்பு திறன் கொண்ட கலப்பின விதைகளை தேர்வு செய்யவும்.",
+            "பருவத்திற்கு ஏற்றவாறு சரியான காலத்தில் விதைப்பு செய்யவும்; தாமத விதைப்பை தவிர்க்கவும்.",
+            "நல்ல காற்றோட்டம் கிடைக்க போதிய இடைவெளி விட்டு நடவு செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Ampelomyces quisqualis or Trichoderma viride @ 5 g/L with 0.1% surfactant.",
+            "Chemical IPM (TNAU / CIBRC): Apply Mancozeb 75% WP @ 2.0 g/L (400-500 g/acre) or Azoxystrobin 23% SC @ 1 ml/L at first appearance of rust pustules.",
+            "Repeat after 10-14 days if cool, cloudy conditions persist."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: டிரைக்கோடெர்மா விரிடி 5 கிராம்/லிட்டர் நீரில் கலந்து தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): மேன்கோசெப் 75% WP ஏக்கருக்கு 400 கிராம் (2 கிராம்/லிட்டர்) நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 400.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Scout fields during whorl and tassel emergence. Chemical control is economically justified if pustules appear before silking.",
+        "expert_advice_ta": "கதிர் வெளிவரும் முன் துருப்புள்ளிகள் தென்பட்டால் உடனே மேன்கோசெப் தெளித்து கட்டுப்படுத்தவும்.",
+        "source_title": "TNAU Agritech Portal - Maize Pest and Disease Management",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Agritech Portal & ICAR Integrated Pest Management Guide for Maize",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "corn_northern_leaf_blight": {
+        "id": "corn_northern_leaf_blight",
+        "crop_id": "corn",
+        "name_en": "Corn Northern Leaf Blight (Exserohilum)",
+        "name_ta": "மக்காச்சோள வடக்கு இலைக் கருகல் நோய்",
+        "name_hi": "मक्का का उत्तरी पत्ती झुलसा रोग",
+        "pathogen": "Exserohilum turcicum (Fungus)",
+        "symptoms_en": [
+            "Large, elongated, cigar-shaped or spindle-shaped grayish-green to tan lesions (2.5 to 15 cm long).",
+            "Lesions start on lower foliage and spread rapidly upward under humid weather.",
+            "Dark olive-green velvety fungal sporulation visible inside lesions during damp mornings."
+        ],
+        "symptoms_ta": [
+            "சுருட்டு வடிவிலான நீள்வட்ட சாம்பல்-பச்சை அல்லது வெளிர் பழுப்பு நிற கருகல் புள்ளிகள் (2.5 முதல் 15 செ.மீ) தோன்றும்.",
+            "புள்ளிகள் கீழ் இலைகளில் தொடங்கி மேல் இலைகளுக்கு வேகமாகப் பரவும்.",
+            "ஈரப்பதமான காலங்களில் புள்ளிகளின் மத்தியில் அடர் ஆலிவ்-பச்சை பூஞ்சை படிவம் காணப்படும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर सिगार के आकार के बड़े (2.5 से 15 सेमी) भूरे-धूसर रंग के लंबे धब्बे बनते हैं।",
+            "निचली पत्तियों से शुरू होकर रोग तेजी से ऊपर की ओर फैलता है।",
+            "पूरी पत्ती झुलसकर सूख जाती है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Moderate temperatures (18-27°C) with persistent dampness, heavy morning dew, and overcast skies.",
+            "description_ta": "மிதமான வெப்பநிலை (18-27°C), காலை பனி மற்றும் தொடர் மேகமூட்டம்."
+        },
+        "prevention_en": [
+            "Choose certified Ht-gene resistant maize hybrids.",
+            "Practice deep plowing of crop residues to bury overwintering chlamydospores.",
+            "Rotate crops with non-graminaceous crops for at least one season."
+        ],
+        "prevention_ta": [
+            "நோய் எதிர்ப்பு திறன் கொண்ட ரகங்களை பயிரிடவும்.",
+            "பயிர்க் கழிவுகளை ஆழமாக உழுது மண்ணில் மக்கச் செய்யவும்.",
+            "பயிர் சுழற்சி முறையைக் கடைப்பிடிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Seed treatment with Trichoderma viride @ 4 g/kg seed + foliar spray of Pseudomonas fluorescens @ 5 g/L.",
+            "Chemical IPM (TNAU / ICAR): Spray Mancozeb 75% WP @ 2 g/L (400-500 g/acre) or Propiconazole 25% EC @ 1 ml/L (200 ml/acre) at first lesion detection.",
+            "Repeat at 12-day intervals if cool, humid weather continues."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: விதை நேர்த்திக்கு டிரைக்கோடெர்மா விரிடி 4 கிராம்/கிலோ; இலை தெளிப்புக்கு சூடோமோனாஸ் 5 கிராம்/லிட்டர்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): புரோபிகோனசோல் 25% EC ஏக்கருக்கு 200 மி.லி அல்லது மேன்கோசெப் 75% WP ஏக்கருக்கு 400 கிராம் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 400.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Control is critical if lesions appear before silking. Spray early to prevent defoliation during kernel filling.",
+        "expert_advice_ta": "கதிர் வைக்கும் முன் நோய் தாக்கினால் உடனே மருந்து தெளித்து இலைகளைப் பாதுகாக்கவும்.",
+        "source_title": "ICAR-IIMR Compendium of Maize Diseases",
+        "source_org": "ICAR-Indian Institute of Maize Research (IIMR)",
+        "reference": "ICAR-IIMR Maize Pathology Bulletin & TNAU Agritech Portal",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "corn_healthy": {
+        "id": "corn_healthy",
+        "crop_id": "corn",
+        "name_en": "Healthy Corn Foliage",
+        "name_ta": "ஆரோக்கியமான மக்காச்சோள இலை",
+        "name_hi": "स्वस्थ मक्के की पत्ती",
+        "pathogen": "None (Plant is healthy and vigorous)",
+        "symptoms_en": [
+            "Broad, arching vibrant green leaves with sturdy midribs and no chlorotic or necrotic spots.",
+            "Clean leaf blades without fungal pustules, striping, or insect chewing damage.",
+            "Vigorous stem and tassel emergence."
+        ],
+        "symptoms_ta": [
+            "புள்ளிகள் மற்றும் கருகல் இல்லாத அகன்ற அடர்பச்சை இலைகள்.",
+            "பூஞ்சை கொப்புளங்களோ பூச்சி தாக்குதலோ இல்லாத ஆரோக்கியமான பயிர்.",
+            "வீரியமான தண்டு மற்றும் கதிர் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "बिना किसी धब्बे के चौड़ी हरी पत्तियां।",
+            "पौधा मजबूत और स्वस्थ है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Well-drained fertile loam with adequate sunshine and balanced soil moisture.",
+            "description_ta": "நல்ல வடிகால் வசதியுள்ள மண் மற்றும் போதுமான சூரிய வெளிச்சம்."
+        },
+        "prevention_en": [
+            "Maintain scheduled split application of Nitrogen (basal, knee-high, and tasseling stages).",
+            "Monitor weekly for Fall Armyworm (Spodoptera frugiperda) and stem borer.",
+            "Avoid moisture stress during the critical tasseling and silking window."
+        ],
+        "prevention_ta": [
+            "பரிந்துரைக்கப்பட்ட தழைச்சத்தை பிரித்து இடவும் (அடி உரம், முழங்கால் பருவம், கதிர் பருவம்).",
+            "படைப்புழு தாக்குதல் உள்ளதா என வாரம் ஒருமுறை கண்காணிக்கவும்."
+        ],
+        "management_en": [
+            "No chemical fungicides needed. Continue routine irrigation and nutrient management.",
+            "Apply prophylactic Azospirillum and Phosphobacteria biofertilizers at irrigation."
+        ],
+        "management_ta": [
+            "ரசாயன மருந்துகள் எதுவும் தேவையில்லை. வழக்கமான பாசனம் மற்றும் உரமிடுதலை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Crop is healthy. Ensure adequate irrigation during silking to maximize cob filling.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. கதிர் முதிர்ச்சி அடையும் வரை சீரான பாசனம் செய்யவும்.",
+        "source_title": "ICAR-IIMR Maize Production Guidelines",
+        "source_org": "ICAR-IIMR",
+        "reference": "ICAR-IIMR & TNAU Agritech Portal",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # APPLE (4 classes)
+    # -------------------------------------------------------------
+    "apple_scab": {
+        "id": "apple_scab",
+        "crop_id": "apple",
+        "name_en": "Apple Scab (Venturia inaequalis)",
+        "name_ta": "ஆப்பிள் செதில் நோய் (ஸ்கேப்)",
+        "name_hi": "सेब का स्कैब रोग",
+        "pathogen": "Venturia inaequalis (Ascomycete Fungus)",
+        "symptoms_en": [
+            "Olive-green to velvety dull brown circular spots on leaves that turn dark brown to black and corky with age.",
+            "Infected leaves become curled, puckered, yellowed, and drop prematurely.",
+            "Fruit develops scabby, corky dark spots that crack and stunt fruit development."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் ஆலிவ்-பச்சை அல்லது வெல்வெட் போன்ற அடர் பழுப்பு நிற வட்ட புள்ளிகள் தோன்றும்.",
+            "முதிர்ந்த புள்ளிகள் காய்ந்து மரக்கட்டை போல் கடினமாகும்; இலைகள் சுருங்கி உதிரும்.",
+            "காய்களில் சொறி போன்ற விரிசல் கொண்ட கருப்பு புள்ளிகள் ஏற்பட்டு காய் வளர்ச்சி குன்றும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर जैतूनी हरे व मखमली भूरे रंग के धब्बे बनते हैं जो बाद में काले हो जाते हैं।",
+            "पत्तियां मुड़कर समय से पहले गिर जाती हैं।",
+            "फलों पर पपड़ीदार खुरदुरे काले धब्बे पड़ते हैं और फल फट जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Cool, wet spring weather (12-24°C) with continuous foliage wetness for 9 or more hours.",
+            "description_ta": "குளிர்ந்த மழைக்காலம் (12-24°C) மற்றும் இலைகளில் தொடர்ந்து 9 மணி நேரத்திற்கு மேல் ஈரம் தங்குதல்."
+        },
+        "prevention_en": [
+            "Prune canopy annually to facilitate sunlight penetration and rapid drying of leaves.",
+            "Shred and plow fallen orchard leaves in autumn to disrupt overwintering pseudothecia.",
+            "Plant scab-resistant cultivars where commercially viable."
+        ],
+        "prevention_ta": [
+            "மரங்களில் நல்ல காற்றோட்டம் மற்றும் சூரிய வெளிச்சம் பட கிளைகளை கவாத்து செய்யவும்.",
+            "இலையுதிர் காலத்தில் கீழே விழும் இலைகளை சேகரித்து எரிக்கவும் அல்லது உழுது மக்கச் செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar application of Serenade (Bacillus subtilis) or Wettable Sulfur @ 3 g/L during pink bud.",
+            "Chemical IPM (ICAR-CITH / TNAU): Spray Mancozeb 75% WP @ 2.5 g/L (500 g/acre) or Dodine 65% WP @ 1 g/L or Difenoconazole 25% EC @ 0.5 ml/L at green tip and petal fall stages.",
+            "Observe 14-day pre-harvest intervals for chemical sprays."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: நனையும் கந்தகம் 3 கிராம்/லிட்டர் அல்லது பேசிலஸ் சப்டிலிஸ் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி: மேன்கோசெப் 75% WP ஏக்கருக்கு 500 கிராம் (2.5 கிராம்/லிட்டர்) அல்லது டைபினோகொனசோல் 0.5 மி.லி/லிட்டர் நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.5,
+        "chemical_grams_per_acre": 500.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Timing is paramount. Protective sprays must precede rain events during early bud-burst to petal fall.",
+        "expert_advice_ta": "மொட்டு வெடிக்கும் பருவம் முதல் பூவிதழ் உதிரும் பருவம் வரை மழைக்கு முன் பாதுகாப்பு மருந்து தெளிப்பது அவசியம்.",
+        "source_title": "ICAR-Central Institute of Temperate Horticulture (CITH) Apple Spray Schedule",
+        "source_org": "ICAR-CITH Srinagar & TNAU Horticulture",
+        "reference": "ICAR-CITH Apple Disease Advisory & CIBRC Approved Fungicides",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "apple_black_rot": {
+        "id": "apple_black_rot",
+        "crop_id": "apple",
+        "name_en": "Apple Black Rot (Botryosphaeria)",
+        "name_ta": "ஆப்பிள் கருப்பு அழுகல் நோய்",
+        "name_hi": "सेब का काला सड़न रोग",
+        "pathogen": "Botryosphaeria obtusa (Fungus)",
+        "symptoms_en": [
+            "Frogeye leaf spots: small purple specks expanding into circular lesions with light brown centers and distinct dark purple margins.",
+            "Black sunken limb cankers on branches and trunk with cracked bark.",
+            "Firm brown rot on fruit that darkens to coal-black, mummifying on the branch."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் தவளைக் கண் போன்ற புள்ளிகள் (மத்தியில் வெளிர் பழுப்பு, விளிம்பில் அடர் ஊதா) தோன்றும்.",
+            "மரக் கிளைகளில் கருமையான பள்ளங்கள் மற்றும் பட்டை வெடிப்புகள் ஏற்படும்.",
+            "காய்கள் கருப்பாக அழுகி மரத்திலேயே காய்ந்து சுருங்கி தொங்கும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर मेंढक की आंख जैसे गोल धब्बे बनते हैं (किनारे बैंगनी, बीच में भूरे)।",
+            "टहनियों पर काले धंसे हुए घाव बनते हैं।",
+            "फल सड़कर कोयले जैसे काले हो जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, humid weather (20-27°C) and presence of fire-blight cankers or wounded bark.",
+            "description_ta": "மிதமான வெப்பம் (20-27°C) மற்றும் காயம்பட்ட மரப்பட்டைகள்."
+        },
+        "prevention_en": [
+            "Prune out dead wood, fire-blight infected twigs, and cankered limbs during winter dormancy.",
+            "Remove and destroy all mummified fruit hanging on trees or lying on orchard floor.",
+            "Prevent bark injury from equipment and maintain balanced tree nutrition."
+        ],
+        "prevention_ta": [
+            "குளிர்காலத்தில் காய்ந்த மற்றும் நோயுற்ற கிளைகளை வெட்டி அகற்றவும்.",
+            "மரத்திலுள்ள சுருங்கிய அழுகிய பழங்களை சேகரித்து அழிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Paint pruning cuts with Trichoderma viride paste (100 g in 1 L linseed oil).",
+            "Chemical IPM (ICAR-CITH): Spray Captan 50% WP @ 2.5 g/L (500 g/acre) or Thiophanate-methyl 70% WP @ 1 g/L at petal fall and cover sprays.",
+            "Maintain strict orchard sanitation."
+        ],
+        "management_ta": [
+            "கவாத்து செய்த வெட்டுப்பகுதிகளில் டிரைக்கோடெர்மா பூஞ்சை பசை பூசவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி: கேப்டான் 50% WP 2.5 கிராம்/லிட்டர் அல்லது தையோபனேட் மீதைல் 1 கிராம்/லிட்டர் நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 500.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Eradicate cankers and mummies before spring bud break to reduce primary inoculum by over 80%.",
+        "expert_advice_ta": "வசந்த காலத்திற்கு முன்பே மரத்தின் காயங்களை சுத்தப்படுத்தி பசை பூசுவது நோயை 80% கட்டுப்படுத்தும்.",
+        "source_title": "Cornell University Cooperative Extension - Tree Fruit IPM",
+        "source_org": "Cornell Tree Fruit Extension & ICAR-CITH",
+        "reference": "Cornell Pest Management Guidelines for Commercial Tree Fruit & ICAR-CITH",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "apple_cedar_apple_rust": {
+        "id": "apple_cedar_apple_rust",
+        "crop_id": "apple",
+        "name_en": "Cedar Apple Rust (Gymnosporangium)",
+        "name_ta": "ஆப்பிள் துரு நோய்",
+        "name_hi": "सेब का रतुआ रोग",
+        "pathogen": "Gymnosporangium juniperi-virginianae (Heteroecious Rust Fungus)",
+        "symptoms_en": [
+            "Bright orange-yellow circular spots with red borders on upper leaf surface.",
+            "Underside of lesions develops cylindrical raised tube-like fungal aecia structures that release powdery brown spores.",
+            "Fruit lesions are raised, orange-yellow, and cause distortion."
+        ],
+        "symptoms_ta": [
+            "இலையின் மேல்புறத்தில் பிரகாசமான ஆரஞ்சு-மஞ்சள் நிற வட்ட புள்ளிகள் தோன்றும்.",
+            "இலையின் அடிப்பகுதியில் சிறிய குழாய் போன்ற வித்து அமைப்புகள் உருவாகும்.",
+            "காய்களில் ஆரஞ்சு நிற தழும்புகள் ஏற்பட்டு காய் வடிவம் மாறும்."
+        ],
+        "symptoms_hi": [
+            "पत्ती की ऊपरी सतह पर चमकीले नारंगी-पीले धब्बे बनते हैं।",
+            "पत्ती के नीचे नली जैसे उभार बनते हैं।",
+            "फल विकृत हो जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Presence of alternate host cedar/juniper trees nearby with wet spring weather (10-24°C).",
+            "description_ta": "சுற்றுவட்டாரத்தில் ஜூனிபர்/சிடார் மரங்கள் இருத்தல் மற்றும் வசந்த கால ஈரப்பதம்."
+        },
+        "prevention_en": [
+            "Remove Eastern red cedar and ornamental junipers within 1 to 2 km radius of the orchard.",
+            "Plant rust-immune or resistant apple cultivars.",
+            "Prune galls on nearby ornamental junipers before gelatinous spore horns form in spring."
+        ],
+        "prevention_ta": [
+            "ஆப்பிள் தோட்டத்திற்கு அருகில் உள்ள சிடார்/ஜூனிபர் மரங்களை அகற்றவும்.",
+            "துரு நோய் எதிர்ப்பு ரகங்களைத் தேர்ந்தெடுக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar sulfur dusting (80% DP @ 2 kg/acre) prior to forecasted rain.",
+            "Chemical IPM (ICAR / Penn State): Apply Myclobutanil 10% WP @ 0.5 g/L or Mancozeb 75% WP @ 2.5 g/L from pink bud through petal fall.",
+            "Observe recommended pre-harvest intervals."
+        ],
+        "management_ta": [
+            "இயற்கை கந்தக தூவல் ஏக்கருக்கு 2 கிலோ அளவில் தூவவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி: மைக்கோபுட்டானில் 10% WP 0.5 கிராம்/லிட்டர் அல்லது மேன்கோசெப் 2.5 கிராம்/லிட்டர் தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 2.0,
+        "chemical_grams_per_acre": 500.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Protection is required only from pink bud until 2-3 weeks after petal fall when juniper aeciospores are actively blowing.",
+        "expert_advice_ta": "பூ மொட்டு பருவம் முதல் பூவிதழ் உதிர்ந்து 3 வாரங்கள் வரை பாதுகாப்பு தெளிப்பு மிகவும் அவசியம்.",
+        "source_title": "Penn State Extension - Tree Fruit Production Guide",
+        "source_org": "Penn State Extension & ICAR-CITH",
+        "reference": "Penn State Tree Fruit Production Guide & ICAR Disease Compendium",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "apple_healthy": {
+        "id": "apple_healthy",
+        "crop_id": "apple",
+        "name_en": "Healthy Apple Foliage",
+        "name_ta": "ஆரோக்கியமான ஆப்பிள் இலை",
+        "name_hi": "स्वस्थ सेब की पत्ती",
+        "pathogen": "None (Plant is healthy)",
+        "symptoms_en": [
+            "Lush, dark green leaves with smooth margins and no lesions, mildew, or chlorosis.",
+            "Sturdy spurs and shoots with vigorous fruit development.",
+            "No pest or mite stippling."
+        ],
+        "symptoms_ta": [
+            "புள்ளிகள் மற்றும் கருகல் இல்லாத ஆரோக்கியமான அடர்பச்சை இலைகள்.",
+            "வலுவான கிளைகள் மற்றும் சீரான காய் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ और हरी पत्तियां, बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Temperate climate with adequate winter chilling hours and well-drained orchard soil.",
+            "description_ta": "மிதமான குளிர் தட்பவெப்பநிலை மற்றும் நல்ல வடிகால் வசதி."
+        },
+        "prevention_en": [
+            "Maintain annual winter pruning and balanced NPK + Boron/Zinc micro-nutrients.",
+            "Monitor weekly with pheromone traps for codling moth and leaf miners.",
+            "Maintain drip irrigation and orchard mulching."
+        ],
+        "prevention_ta": [
+            "வருடாந்திர கவாத்து மற்றும் சீரான நுண்ணூட்டச்சத்து மேலாண்மை செய்யவும்."
+        ],
+        "management_en": [
+            "No chemical intervention needed. Maintain balanced tree care and regular orchard monitoring."
+        ],
+        "management_ta": [
+            "ரசாயன மருந்துகள் தேவையில்லை. வழக்கமான தோட்ட பராமரிப்பை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Trees are healthy. Ensure post-bloom calcium sprays to prevent bitter pit in fruit.",
+        "expert_advice_ta": "மரங்கள் ஆரோக்கியமாக உள்ளன. பழங்களில் கசப்பு புள்ளி வராமல் தடுக்க கால்சியம் தெளிக்கவும்.",
+        "source_title": "ICAR-CITH Temperate Fruit Management Guidelines",
+        "source_org": "ICAR-CITH Srinagar",
+        "reference": "ICAR-CITH Temperate Fruit Compendium",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # BLUEBERRY (1 class)
+    # -------------------------------------------------------------
+    "blueberry_healthy": {
+        "id": "blueberry_healthy",
+        "crop_id": "blueberry",
+        "name_en": "Healthy Blueberry Foliage",
+        "name_ta": "ஆரோக்கியமான புளூபெர்ரி இலை",
+        "name_hi": "स्वस्थ ब्लूबेरी की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Glossy, ovate deep-green foliage without red flecking or marginal scorch.",
+            "Vigorous canes with abundant flower clusters and berry set."
+        ],
+        "symptoms_ta": [
+            "பளபளப்பான அடர்பச்சை இலைகள், கருகல் அல்லது புள்ளிகள் இல்லை.",
+            "ஆரோக்கியமான கிளைகள் மற்றும் செழிப்பான பழக் கொத்துக்கள்."
+        ],
+        "symptoms_hi": [
+            "चमकदार हरी पत्तियां और स्वस्थ पौधा।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Acidic soils with pH 4.5 to 5.2 rich in organic matter (peat moss/pine bark) and uniform drip moisture.",
+            "description_ta": "அமிலத்தன்மை கொண்ட மண் (pH 4.5 - 5.2) மற்றும் சீரான ஈரப்பதம்."
+        },
+        "prevention_en": [
+            "Test soil pH annually; apply elemental sulfur if pH rises above 5.3 to prevent iron chlorosis.",
+            "Mulch heavily with pine bark or sawdust (7-10 cm deep) to retain moisture and suppress weeds.",
+            "Maintain drip irrigation with low-salinity water."
+        ],
+        "prevention_ta": [
+            "மண் அமிலத்தன்மையை (pH 4.5-5.2) ஆண்டுதோறும் பரிசோதிக்கவும்.",
+            "மரத்தூள் அல்லது மரப்பட்டை கொண்டு நிலப்போர்வை அமைக்கவும்."
+        ],
+        "management_en": [
+            "No chemical fungicides required. Continue standard blueberry fertilization (ammonium sulfate)."
+        ],
+        "management_ta": [
+            "பூஞ்சைக்கொல்லிகள் தேவையில்லை. வழக்கமான உரமிடுதல் மற்றும் நீர்ப்பாசனம் தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Foliage is healthy. Ensure soil pH remains below 5.2 to avoid micronutrient lockout.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. மண் pH 5.2-க்கு கீழ் இருப்பதை உறுதி செய்யவும்.",
+        "source_title": "ICAR Temperate Berry Production Guide",
+        "source_org": "ICAR-NRC Orchids & Temperate Berries",
+        "reference": "ICAR Temperate Berry Guide & Extension Bulletins",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # CHERRY (2 classes)
+    # -------------------------------------------------------------
+    "cherry_powdery_mildew": {
+        "id": "cherry_powdery_mildew",
+        "crop_id": "cherry",
+        "name_en": "Cherry Powdery Mildew (Podosphaera)",
+        "name_ta": "செர்ரி சாம்பல் நோய்",
+        "name_hi": "चेरी का चूर्णिल आसिता (पाउडரி मिल्ड्यू) रोग",
+        "pathogen": "Podosphaera clandestina (Fungus)",
+        "symptoms_en": [
+            "White, talcum-like powdery fungal patches on young foliage and succulent shoot tips.",
+            "Infected leaves cup, curl upward, distort, and become brittle.",
+            "Green developing fruit gets coated with white mycelium, causing deformation and unmarketable fruit."
+        ],
+        "symptoms_ta": [
+            "இளம் இலைகள் மற்றும் தளிர்களில் வெள்ளை மாவு போன்ற பூஞ்சை படிவம் தோன்றும்.",
+            "இலைகள் மேல்நோக்கி சுருண்டு உருமாறும்.",
+            "பிஞ்சு காய்களில் வெள்ளை பூஞ்சை படர்ந்து காய் சொறியாகி அழுகும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों और टहनियों पर सफेद पाउडर जैसी फफूंद जम जाती है।",
+            "पत्तियां ऊपर की ओर मुड़ जाती हैं।",
+            "फलों पर सफेद पाउडर जमने से फल खराब हो जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, dry daytime temperatures (20-28°C) accompanied by humid nights and dense shade.",
+            "description_ta": "மிதமான வெப்பமான பகல் மற்றும் அதிக ஈரப்பதமான இரவு."
+        },
+        "prevention_en": [
+            "Prune inner canopy vigorously to enhance airflow and light penetration.",
+            "Avoid excessive late-season nitrogen applications that stimulate late succulent flush.",
+            "Monitor water shoots and sucker growth weekly."
+        ],
+        "prevention_ta": [
+            "மரத்தின் உட்பகுதியில் நல்ல காற்றோட்டம் கிடைக்க கிளைகளை கவாத்து செய்யவும்.",
+            "அதிகப்படியான தழைச்சத்து உரமிடுவதை தவிர்க்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Spray Potassium bicarbonate @ 3 g/L or Wettable Sulfur 80% WP @ 2.5 g/L.",
+            "Chemical IPM (ICAR-CITH / UC Davis): Apply Hexaconazole 5% EC @ 1 ml/L (200 ml/acre) or Myclobutanil 10% WP @ 0.5 g/L or Difenoconazole 25% EC @ 0.5 ml/L starting at petal fall.",
+            "Rotate chemical classes to prevent resistance."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: பொட்டாசியம் பைகார்பனேட் 3 கிராம்/லிட்டர் அல்லது கந்தகம் 2.5 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி: ஹெக்சாகொனசோல் 5% EC ஏக்கருக்கு 200 மி.லி (1 மி.லி/லிட்டர்) கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.5,
+        "chemical_grams_per_acre": 200.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Initiate control at shuck fall. Once mildew is established on expanding green fruit, eradication is impossible.",
+        "expert_advice_ta": "பூவிதழ் உதிர்ந்த உடனே முதல் தெளிப்பை மேற்கொள்ளவும்; காய் பிடித்த பின் கட்டுப்படுத்துவது கடினம்.",
+        "source_title": "UC Davis IPM Cherry Pest Management Guidelines",
+        "source_org": "University of California Statewide IPM Program & ICAR-CITH",
+        "reference": "UC IPM Cherry Guidelines & ICAR-CITH Advisory",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "cherry_healthy": {
+        "id": "cherry_healthy",
+        "crop_id": "cherry",
+        "name_en": "Healthy Cherry Foliage",
+        "name_ta": "ஆரோக்கியமான செர்ரி இலை",
+        "name_hi": "स्वस्थ चेरी की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Vibrant, uniformly green foliage with serrated margins and no powdery mildew or shothole lesions.",
+            "Clean shoots and healthy expanding fruit clusters."
+        ],
+        "symptoms_ta": [
+            "சாம்பல் படிவமோ துளைகளோ இல்லாத அடர்பச்சை இலைகள்.",
+            "ஆரோக்கியமான தளிர் மற்றும் காய் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Adequate winter chilling with warm, dry ripening summers and well-drained orchard soil.",
+            "description_ta": "நல்ல வடிகால் வசதியுள்ள மண் மற்றும் சீரான தட்பவெப்பநிலை."
+        },
+        "prevention_en": [
+            "Maintain balanced stone-fruit fertilization.",
+            "Regular scouting for cherry fruit fly and aphids.",
+            "Manage orchard floor weeds."
+        ],
+        "prevention_ta": [
+            "சீரான உர மேலாண்மை மற்றும் களை கட்டுப்பாடு செய்யவும்."
+        ],
+        "management_en": [
+            "No chemical sprays required. Continue standard irrigation and canopy maintenance."
+        ],
+        "management_ta": [
+            "மருந்து தெளிப்பு தேவையில்லை. வழக்கமான தோட்ட பராமரிப்பை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Foliage is healthy. Maintain netting or bird deterrents as fruit approaches veraison.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. பழம் பழுக்கும் போது பறவை வலைகளை அமைக்கவும்.",
+        "source_title": "ICAR-CITH Stone Fruit Guide",
+        "source_org": "ICAR-CITH",
+        "reference": "ICAR-CITH Cherry Management",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # GRAPE (4 classes)
+    # -------------------------------------------------------------
+    "grape_black_rot": {
+        "id": "grape_black_rot",
+        "crop_id": "grape",
+        "name_en": "Grape Black Rot (Guignardia)",
+        "name_ta": "திராட்சை கருப்பு அழுகல் நோய்",
+        "name_hi": "अंगूर का ब्लैक रॉट (काला सड़न) रोग",
+        "pathogen": "Guignardia bidwellii (Fungus)",
+        "symptoms_en": [
+            "Small, circular reddish-brown leaf spots that enlarge and develop a distinct ring of tiny black pycnidia (pimples) near the margin.",
+            "Infected berries develop light brown water-soaked spots, turn dark purple-black, and shrivel into hard, wrinkled mummies in 48 hours."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் செம்பழுப்பு நிற வட்ட புள்ளிகள் தோன்றி, அதன் விளிம்புகளில் கருப்பு நிற துகள்கள் உருவாகும்.",
+            "திராட்சை மணிகள் பழுப்பு நிறமாகி சுருங்கி, 48 மணி நேரத்தில் கருப்பு நிறத்தில் காய்ந்து வற்றலாகி கொடியில் தொங்கும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर लाल-भूरे रंग के गोल धब्बे बनते हैं जिनके किनारों पर काले दाने दिखते हैं।",
+            "अंगूर के दाने भूरे होकर सिकुड़ जाते हैं और काले व सूखे हो जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, wet conditions (21-27°C) with 7 or more hours of continuous leaf wetness.",
+            "description_ta": "மிதமான வெப்பம் (21-27°C) மற்றும் இலைகளில் 7 மணி நேரத்திற்கு மேல் ஈரம் தங்குதல்."
+        },
+        "prevention_en": [
+            "Prune dormant canes and bury or burn all mummified grape clusters on trellises or ground.",
+            "Shoot-position and canopy-manage to ensure maximum air movement through fruiting zone.",
+            "Plant rows oriented to maximize prevailing wind drying."
+        ],
+        "prevention_ta": [
+            "கொடிகளில் உள்ள காய்ந்த அழுகிய திராட்சை வற்றல்களை சேகரித்து எரிக்கவும்.",
+            "கொடிப் பந்தலில் நல்ல காற்றோட்டம் கிடைக்க தேவையற்ற இலைகளை கழிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar application of 1% Bordeaux mixture or Copper Hydroxide @ 2 g/L.",
+            "Chemical IPM (ICAR-NRCG Pune / TNAU): Spray Mancozeb 75% WP @ 2.5 g/L (500 g/acre) or Azoxystrobin 23% SC @ 1 ml/L or Kresoxim-methyl 44.3% SC @ 0.7 ml/L.",
+            "Critical spray window is from early bloom through 4-5 weeks post-bloom."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: 1% போர்டோ கலவை அல்லது காப்பர் ஹைட்ராக்சைடு 2 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (NRCG / TNAU): மேன்கோசெப் 75% WP ஏக்கருக்கு 500 கிராம் (2.5 கிராம்/லிட்டர்) அல்லது அசோக்சிஸ்ட்ரோபின் 1 மி.லி/லிட்டர் நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 2.0,
+        "chemical_grams_per_acre": 500.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Berries become highly resistant to black rot once sugar accumulation begins (veraison). Early protection is critical.",
+        "expert_advice_ta": "திராட்சை மணி இனிப்பு வைக்கும் முன் (பூ பூத்த 4 வாரங்களுக்குள்) தெளிப்பது முழு பாதுகாப்பு தரும்.",
+        "source_title": "ICAR-National Research Centre for Grapes (NRCG) Pune Advisory",
+        "source_org": "ICAR-NRCG Pune & TNAU Agritech",
+        "reference": "ICAR-NRCG Grape Disease Compendium & TNAU Guidelines",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "grape_esca": {
+        "id": "grape_esca",
+        "crop_id": "grape",
+        "name_en": "Grape Esca (Black Measles)",
+        "name_ta": "திராட்சை எஸ்கா (கருப்பு தட்டம்மை) நோய்",
+        "name_hi": "अंगूर का एस्का (ब्लैक मीजल्स) रोग",
+        "pathogen": "Phaeomoniella chlamydospora & Fomitiporia (Fungal Complex)",
+        "symptoms_en": [
+            "Tiger-stripe foliar symptoms: interveinal chlorosis and necrosis with green bands remaining along primary veins.",
+            "Apoplexy: sudden rapid wilting and collapse of entire vines during hot dry summer days.",
+            "Black measles on berries: small dark purple to brown flecks scattered over the fruit skin."
+        ],
+        "symptoms_ta": [
+            "புலி வரி போன்ற இலை அறிகுறிகள்: இலை நரம்புகளுக்கு இடையே மஞ்சள் மற்றும் பழுப்பு நிற வரிகள் தோன்றும்.",
+            "கோடை வெயிலில் திடீரென முழுக் கொடியும் வாடி இறந்து போகும் (அப்போப்ளெக்சி).",
+            "திராட்சை பழங்களின் தோலில் அம்மை போன்ற கருப்பு புள்ளிகள் தோன்றும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर बाघ की धारियों (टाइगर स्ट्राइप) जैसे पीले और भूरे धब्बे बनते हैं।",
+            "गर्मी में अचानक पूरी बेल मुरझाकर सूख जाती है।",
+            "फलों पर चेचक जैसे गहरे बैंगनी धब्बे पड़ते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Mature vineyards (>8 years old) with pruning wounds exposed to rain and high summer evapotranspiration.",
+            "description_ta": "பழைய திராட்சை தோட்டங்கள் மற்றும் மழையில் நனையும் கவாத்து வெட்டு காயங்கள்."
+        },
+        "prevention_en": [
+            "Prune late in the dormant season during dry weather when wound healing is rapid.",
+            "Treat large pruning cuts immediately with wound sealant containing Trichoderma or Thiophanate-methyl.",
+            "Sanitize pruning shears with 70% alcohol or 10% bleach between vines."
+        ],
+        "prevention_ta": [
+            "மழை இல்லாத வறண்ட நாட்களில் மட்டுமே கவாத்து செய்யவும்.",
+            "பெரிய வெட்டு காயங்களில் டிரைக்கோடெர்மா பசை அல்லது களிம்பு பூசவும்.",
+            "கத்தரிக்கோலை ஆல்கஹால் கொண்டு கிருமி நீக்கம் செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Wound dressing with Trichoderma harzianum formulation.",
+            "Chemical IPM: Trunk renewal by training a sucker from below cankered cordons; paint trunk wounds with Carbendazim 50% WP (10 g/L paste).",
+            "Mark chronically affected vines and prune them last to prevent mechanical spread."
+        ],
+        "management_ta": [
+            "டிரைக்கோடெர்மா பூஞ்சை பசையை தண்டு காயங்களில் பூசவும்.",
+            "பாதிக்கப்பட்ட கொடிகளை தனியாக குறியிட்டு கடைசியாக கவாத்து செய்யவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 250.0,
+        "water_litres_per_acre": 100,
+        "expert_advice_en": "Esca is a systemic trunk disease with no curative spray. Trunk wound protection and cordon retraining are primary controls.",
+        "expert_advice_ta": "எஸ்கா தண்டு நோய் என்பதால் தெளிப்பு மருந்துகளால் குணப்படுத்த முடியாது; வெட்டுக் காயங்களை பூசுவதே ஒரே தீர்வு.",
+        "source_title": "ICAR-NRCG Grape Trunk Disease Advisory",
+        "source_org": "ICAR-NRCG Pune",
+        "reference": "ICAR-NRCG Pune & UC Davis IPM Grape Guidelines",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "grape_leaf_blight": {
+        "id": "grape_leaf_blight",
+        "crop_id": "grape",
+        "name_en": "Grape Leaf Blight (Isariopsis)",
+        "name_ta": "திராட்சை இலைக் கருகல் நோய்",
+        "name_hi": "अंगूर का पत्ती झुलसा रोग",
+        "pathogen": "Pseudocercospora cladosporioides / Isariopsis clavispora (Fungus)",
+        "symptoms_en": [
+            "Irregular large brown to black necrotic blotches with yellow margins on leaves.",
+            "Severe infection leads to widespread premature defoliation exposing bunches to sunburn.",
+            "Dull brown spots may also develop on pedicels and cluster stems."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் ஒழுங்கற்ற பெரிய பழுப்பு நிற கருகல் திட்டுகள் தோன்றும்.",
+            "இலைகள் காய்ந்து முன்கூட்டியே உதிர்வதால் திராட்சை குலைகள் வெயிலில் வெம்பி சேதமடையும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर अनियमित बड़े भूरे-काले धब्बे बनते हैं।",
+            "पत्तियां गिर जाने से फल धूप से झुलस जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "High temperature (25-32°C) combined with intermittent rains and dense canopy microclimate.",
+            "description_ta": "அதிக வெப்பநிலை (25-32°C) மற்றும் விட்டுவிட்டு பெய்யும் மழை."
+        },
+        "prevention_en": [
+            "Improve trellis canopy ventilation by leaf thinning around cluster zones.",
+            "Practice balanced nutrition and avoid excess nitrogen which creates dense, humid canopy.",
+            "Collect and burn infected fallen leaves."
+        ],
+        "prevention_ta": [
+            "குலைகளைச் சுற்றியுள்ள அதிகப்படியான இலைகளை அகற்றி காற்றோட்டத்தை அதிகரிக்கவும்.",
+            "விழுந்த இலைகளை சேகரித்து அழிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Pseudomonas fluorescens @ 5 g/L.",
+            "Chemical IPM (TNAU / ICAR-NRCG): Spray Copper Oxychloride 50% WP @ 2.5 g/L (500 g/acre) or Carbendazim 50% WP @ 1.0 g/L (200 g/acre) or Mancozeb 75% WP @ 2.5 g/L.",
+            "Repeat after 12 days if rains continue."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: சூடோமோனாஸ் 5 கிராம்/லிட்டர் நீரில் கலந்து தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): காப்பர் ஆக்சிகுளோரைடு 2.5 கிராம்/லிட்டர் அல்லது கார்பன்டசிம் 1 கிராம்/லிட்டர் நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 500.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Maintain healthy canopy cover through post-harvest to allow adequate carbohydrate storage in rootstocks.",
+        "expert_advice_ta": "அறுவடைக்கு பின்னும் இலைகள் உதிராமல் பாதுகாக்க மருந்து தெளிப்பது அடுத்த பருவ விளைச்சலுக்கு உதவும்.",
+        "source_title": "TNAU Agritech Portal - Grapes Disease Management",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Agritech Grapes & ICAR-NRCG Pune",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "grape_healthy": {
+        "id": "grape_healthy",
+        "crop_id": "grape",
+        "name_en": "Healthy Grape Foliage",
+        "name_ta": "ஆரோக்கியமான திராட்சை இலை",
+        "name_hi": "स्वस्थ अंगूर की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Deep green, 5-lobed vigorous leaves with clear margins and no downy/powdery mildew or leaf spots.",
+            "Uniform shoot elongation and vibrant berry clusters on well-maintained trellises."
+        ],
+        "symptoms_ta": [
+            "பூஞ்சை அல்லது புள்ளிகள் இல்லாத ஆரோக்கியமான அடர்பச்சை இலைகள்.",
+            "பந்தலில் செழிப்பாக படர்ந்துள்ள கொடிகள் மற்றும் திராட்சை மணிகள்."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm sunny days with moderate humidity and deep well-drained loamy soil with drip fertigation.",
+            "description_ta": "நல்ல சூரிய வெளிச்சம் மற்றும் சொட்டுநீர்ப் பாசனம்."
+        },
+        "prevention_en": [
+            "Continue canopy training and shoot pinching.",
+            "Monitor weekly for thrips, mealybugs, and downy mildew.",
+            "Maintain balanced fertigation schedule based on petiole nutrient analysis."
+        ],
+        "prevention_ta": [
+            "கொடி பயிற்சி மற்றும் நுனி கிள்ளுதல் தொடரவும்.",
+            "அசுவினி மற்றும் மாவுப்பூச்சிகள் உள்ளதா என கண்காணிக்கவும்."
+        ],
+        "management_en": [
+            "No chemical fungicides needed. Continue routine irrigation and micro-nutrient sprays."
+        ],
+        "management_ta": [
+            "ரசாயன மருந்துகள் தேவையில்லை. வழக்கமான உரமிடுதல் மற்றும் பராமரிப்பை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Canopy is healthy. Ensure cluster thinning if set is too heavy to maintain berry size.",
+        "expert_advice_ta": "கொடி ஆரோக்கியமாக உள்ளது. மணி பருமன் அதிகரிக்க அதிகப்படியான குலைகளைக் கழிக்கவும்.",
+        "source_title": "ICAR-NRCG Production Guidelines",
+        "source_org": "ICAR-NRCG Pune",
+        "reference": "ICAR-NRCG Pune & TNAU Grapes Package of Practices",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # ORANGE / CITRUS (1 class)
+    # -------------------------------------------------------------
+    "orange_citrus_greening": {
+        "id": "orange_citrus_greening",
+        "crop_id": "orange",
+        "name_en": "Citrus Greening (Huanglongbing)",
+        "name_ta": "சிட்ரஸ் கிரீனிங் (ஹுவாங்லாங்பிங்) நோய்",
+        "name_hi": "सिट्रस ग्रीनिंग (हुआंगलोंगबिंग) रोग",
+        "pathogen": "Candidatus Liberibacter asiaticus (Fastidious Phloem Bacterium, Vector: Asian Citrus Psyllid)",
+        "symptoms_en": [
+            "Asymmetric blotchy mottle on leaves (chlorotic yellow patches crossing the primary veins irregularly).",
+            "Yellow shoots appearing suddenly in one branch of an otherwise green tree (yellow dragon).",
+            "Upright, small, hardened leaves with zinc-deficiency-like symptoms that do not respond to fertilizer.",
+            "Small, lopsided, bitter fruit with aborted dark seeds; fruit stays green at the stylar end."
+        ],
+        "symptoms_ta": [
+            "இலை நரம்புகளைத் தாண்டி ஒழுங்கற்ற முறையில் தோன்றும் சமச்சீரற்ற மஞ்சள்-பச்சை மங்கலான திட்டுகள்.",
+            "பச்சை மரத்தில் ஒரு கிளை மட்டும் திடீரென மஞ்சள் நிறமாக மாறுதல் (மஞ்சள் டிராகன்).",
+            "துத்தநாக குறைபாடு போன்று செங்குத்தாக நிற்கும் சிறிய, தடித்த இலைகள்.",
+            "ஒருபுறம் சாய்ந்த, கசப்புச் சுவையுடைய பழங்கள்; பழத்தின் அடிப்பகுதி பழுக்காமல் பச்சையாகவே இருத்தல்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर अनियमित रूप से पीले-हरे धब्बे (असममित ब्लॉची मोटल) बनते हैं।",
+            "पूरे हरे पेड़ में कोई एक टहनी अचानक पीली पड़ जाती है।",
+            "फल टेढ़े-मेढ़े, छोटे, कड़वे और पकने पर भी नीचे से हरे रहते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm humid conditions (22-30°C) with active vegetative flushing that attracts the Asian Citrus Psyllid vector.",
+            "description_ta": "புதிய தளிர் விடும் பருவம் மற்றும் ஆசிய சிட்ரஸ் சைலிட் பூச்சிகள் பரவுதல்."
+        },
+        "prevention_en": [
+            "Plant only certified disease-free budwood from registered screenhouse nurseries.",
+            "Aggressively scout and control the Asian Citrus Psyllid (Diaphorina citri) vector using yellow sticky traps.",
+            "Promptly rogue out (uproot and burn) severely infected trees to eliminate bacterial reservoirs."
+        ],
+        "prevention_ta": [
+            "சான்றளிக்கப்பட்ட நர்சரிகளிலிருந்து பெறப்பட்ட ஆரோக்கியமான ஒட்டுக்கன்றுகளை மட்டுமே நடவு செய்யவும்.",
+            "சைலிட் பூச்சிகளைக் கட்டுப்படுத்த மஞ்சள் நிற ஒட்டும் பொறிகளைப் பயன்படுத்தவும்.",
+            "தீவிரமாக பாதிக்கப்பட்ட மரங்களை உடனே வேரோடு பிடுங்கி தீயிட்டு அழிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Conserve predatory green lacewings and parasitoid Tamarixia radiata; spray 2% Horticultural Mineral Oil or 5% Neem oil (3000 ppm) to deter psyllids.",
+            "Chemical Vector Control (ICAR-CCRI / TNAU): Spray Imidacloprid 17.8% SL @ 0.5 ml/L (100 ml/acre) or Thiamethoxam 25% WG @ 0.3 g/L during new flush emergence.",
+            "Nutritional Support: Foliar application of Zinc Sulphate 0.5% + Ferrous Sulphate 0.5% + Manganese Sulphate 0.5% to maintain tree vigor.",
+            "Note: There is no commercial cure for the bacterial pathogen inside the tree; vector suppression and tree roguing are compulsory."
+        ],
+        "management_ta": [
+            "பூச்சி கட்டுப்பாடு (TNAU / CCRI): சைலிட் பூச்சியைக் கட்டுப்படுத்த இமிடாக்ளோப்ரிட் 17.8% SL (0.5 மி.லி/லிட்டர்) அல்லது தயாமெத்தாக்சாம் 25% WG (0.3 கிராம்/லிட்டர்) புதிய தளிர் வரும் போது தெளிக்கவும்.",
+            "இயற்கை வழி: 5% வேப்ப எண்ணெய் அல்லது மினரல் ஆயில் தெளிக்கவும்.",
+            "நுண்ணூட்டச்சத்து: துத்தநாகம், இரும்பு, மாங்கனீசு சல்பேட் கரைசல்களை இலைகளில் தெளித்து மரத்தின் வீரியத்தை தக்கவைக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 60.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "HLB has no cure. Control vectors aggressively during each flush and eliminate symptomatic reservoir trees immediately.",
+        "expert_advice_ta": "கிரீனிங் நோயை குணப்படுத்த முடியாது; சைலிட் பூச்சியைக் கட்டுப்படுத்துவதும் நோயுற்ற மரங்களை அகற்றுவதுமே பரவலைத் தடுக்கும்.",
+        "source_title": "ICAR-Central Citrus Research Institute (CCRI) Nagpur Advisory",
+        "source_org": "ICAR-CCRI Nagpur & TNAU Horticulture",
+        "reference": "ICAR-CCRI Citrus Greening Technical Bulletin & TNAU Agritech",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # PEACH (2 classes)
+    # -------------------------------------------------------------
+    "peach_bacterial_spot": {
+        "id": "peach_bacterial_spot",
+        "crop_id": "peach",
+        "name_en": "Peach Bacterial Spot (Xanthomonas)",
+        "name_ta": "பீச் பாக்டீரியா இலைப்புள்ளி நோய்",
+        "name_hi": "आड़ू का जीवाणु धब्बा रोग",
+        "pathogen": "Xanthomonas arboricola pv. pruni (Bacterium)",
+        "symptoms_en": [
+            "Small, water-soaked, angular polygonal spots on leaves that turn purple-brown and drop out, creating a shothole appearance.",
+            "Leaves turn yellow and defoliate, severely weakening the tree.",
+            "Fruit exhibits sunken, dark brown cracked craters with gum exudation."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் சிறிய கோண வடிவ புள்ளிகள் தோன்றி, காய்ந்து உதிர்ந்து துப்பாக்கி குண்டு துளைத்தது போன்ற ஓட்டைகள் (ஷாட்-ஹோல்) ஏற்படும்.",
+            "இலைகள் மஞ்சளாகி உதிரும்; காய்களில் பசை வழியும் வெடிப்புப் பள்ளங்கள் தோன்றும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर कोणीय भूरे धब्बे बनते हैं जो सूखकर गिर जाते हैं और पत्ती में छेद हो जाते हैं (शॉट-होल)।",
+            "पत्तियां पीली होकर गिर जाती हैं और फलों पर गहरे गड्ढे बन जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, windy, wet spring weather (20-29°C) with blowing sandy soils causing micro-abrasions.",
+            "description_ta": "ஈரப்பதமான வசந்த காலம் மற்றும் மணல் கலந்த காற்று இலைகளை உரசுதல்."
+        },
+        "prevention_en": [
+            "Plant bacterial spot-resistant peach varieties.",
+            "Plant windbreaks around orchards to reduce wind-blown sand abrasion that opens infection courts.",
+            "Avoid excessive summer pruning that stimulates late tender succulent growth."
+        ],
+        "prevention_ta": [
+            "நோய் எதிர்ப்பு திறன் கொண்ட ரகங்களை நடவு செய்யவும்.",
+            "தோட்டத்தைச் சுற்றி காற்று தடுப்பு மரங்களை வளர்க்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Copper soap spray or Bacillus subtilis bio-bactericide.",
+            "Chemical IPM (ICAR-CITH / Clemson Extension): Apply Copper Oxychloride 50% WP @ 2.5 g/L during dormant and delayed-dormant stages; apply agricultural Oxytetracycline @ label rates from shuck split to harvest.",
+            "Reduce copper rates during warm growing season to avoid severe phytotoxicity."
+        ],
+        "management_ta": [
+            "குளிர்கால உறக்க பருவத்தில் காப்பர் ஆக்சிகுளோரைடு 2.5 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "வளர்ச்சி பருவத்தில் மிதமான காப்பர் அல்லது பாக்டீரியா எதிர்ப்பு மருந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 500.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Dormant copper sprays are the foundation of control. Avoid high copper concentrations once leaves emerge.",
+        "expert_advice_ta": "இலை துளிர்ப்பதற்கு முன் காப்பர் மருந்து தெளிப்பது நோயைக் கட்டுப்படுத்தும் முதன்மை நடவடிக்கையாகும்.",
+        "source_title": "Clemson University Cooperative Extension - Peach IPM",
+        "source_org": "Clemson Extension & ICAR-CITH",
+        "reference": "Clemson Peach Bacteriology Guide & ICAR-CITH",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "peach_healthy": {
+        "id": "peach_healthy",
+        "crop_id": "peach",
+        "name_en": "Healthy Peach Foliage",
+        "name_ta": "ஆரோக்கியமான பீச் இலை",
+        "name_hi": "स्वस्थ आड़ू की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Glossy lanceolate green leaves without shot-holes, leaf curl, or cankers.",
+            "Strong shoot growth and expanding velvety green fruit."
+        ],
+        "symptoms_ta": [
+            "துளைகள் அல்லது கருகல் இல்லாத பளபளப்பான அடர்பச்சை இலைகள்.",
+            "ஆரோக்கியமான தண்டு மற்றும் காய் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Deep, gravelly, well-drained loamy soil with full sunlight and adequate winter chilling hours.",
+            "description_ta": "நல்ல வடிகால் வசதியுள்ள மண் மற்றும் போதுமான குளிர்."
+        },
+        "prevention_en": [
+            "Maintain balanced stone-fruit pruning and fruit thinning (1 fruit per 15-20 cm of shoot).",
+            "Monitor for oriental fruit moth and peach tree borers.",
+            "Maintain drip irrigation and weed control."
+        ],
+        "prevention_ta": [
+            "சீரான கவாத்து மற்றும் பழங்களை கழித்து விடுதல் (15 செ.மீ-க்கு ஒரு காய்)."
+        ],
+        "management_en": [
+            "No chemical fungicides needed. Continue routine orchard care and soil fertility management."
+        ],
+        "management_ta": [
+            "மருந்துகள் தேவையில்லை. வழக்கமான பராமரிப்பை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Foliage is healthy. Ensure adequate thinning to achieve good fruit size and prevent limb breakage.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. பழங்கள் பெருக்க போதுமான காய்களை கவாத்து செய்யவும்.",
+        "source_title": "ICAR-CITH Peach Advisory",
+        "source_org": "ICAR-CITH",
+        "reference": "ICAR-CITH Stone Fruit Guide",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # SQUASH (1 class)
+    # -------------------------------------------------------------
+    "squash_powdery_mildew": {
+        "id": "squash_powdery_mildew",
+        "crop_id": "squash",
+        "name_en": "Squash Powdery Mildew (Podosphaera)",
+        "name_ta": "பூசணி சாம்பல் நோய்",
+        "name_hi": "कद्दू का चूर्णिल आसिता (पाउडरी मिल्ड्यू) रोग",
+        "pathogen": "Podosphaera xanthii (Fungus)",
+        "symptoms_en": [
+            "White talcum-like powdery spots on both upper and lower leaf surfaces, petioles, and stems.",
+            "Spots expand and coalesce into a continuous white felt, causing leaves to turn brown, dry, and shrivel.",
+            "Premature defoliation exposes fruit to sunscald and reduces fruit brix (sugar content)."
+        ],
+        "symptoms_ta": [
+            "இலையின் இருபுறமும், இலைக்காம்பு மற்றும் தண்டுகளில் வெள்ளை மாவு போன்ற பூஞ்சை படலம் தோன்றும்.",
+            "பூஞ்சை படலம் இலை முழுவதும் பரவி இலை காய்ந்து சருகாகும்.",
+            "இலைகள் உதிர்வதால் காய்கள் வெயிலில் வெம்பி தரம் குறையும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों की दोनों सतहों और तनों पर सफेद पाउडर के धब्बे बनते हैं।",
+            "पत्तियां सूखकर भूरी हो जाती हैं।",
+            "फलों पर धूप लगने से गुणवत्ता घट जाती है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, dry daytime temperatures (22-30°C) with high relative humidity at night and dense shade under lush foliage.",
+            "description_ta": "மிதமான வெப்பமான பகல் மற்றும் அதிக ஈரப்பதமான இரவு."
+        },
+        "prevention_en": [
+            "Select powdery mildew-resistant squash and pumpkin hybrids.",
+            "Maintain wide plant spacing (1.5-2.0 m between rows) to promote sunlight penetration and air movement.",
+            "Avoid overhead sprinkler irrigation; use drip irrigation to keep canopy dry."
+        ],
+        "prevention_ta": [
+            "சாம்பல் நோய் எதிர்ப்புத் திறன் கொண்ட கலப்பின விதைகளைப் பயன்படுத்தவும்.",
+            "போதிய இடைவெளி விட்டு நடவு செய்து நல்ல காற்றோட்டம் கிடைக்கச் செய்யவும்; சொட்டுநீர்ப் பாசனம் அமைக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Potassium Bicarbonate @ 4 g/L + Neem oil 5 ml/L, or Wettable Sulfur 80% WP @ 2.5 g/L.",
+            "Chemical IPM (TNAU / ICAR-IIVR): Apply Dinocap 48% EC @ 1 ml/L (200 ml/acre) or Difenoconazole 25% EC @ 0.5 ml/L or Azoxystrobin 23% SC @ 1 ml/L at first sign of white spots.",
+            "Ensure thorough spray coverage on both undersides and upper sides of older leaves."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: பொட்டாசியம் பைகார்பனேட் 4 கிராம் + வேப்ப எண்ணெய் 5 மி.லி/லிட்டர் அல்லது நனையும் கந்தகம் 2.5 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): டைனோகேப் 48% EC 1 மி.லி/லிட்டர் அல்லது டைபினோகொனசோல் 0.5 மி.லி/லிட்டர் நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.5,
+        "chemical_grams_per_acre": 200.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Start spraying immediately upon finding a single lesion on the underside of older crown leaves. Spray both leaf surfaces.",
+        "expert_advice_ta": "முதல் வெள்ளை புள்ளி தெரிந்த உடனேயே இலைகளின் இருபுறமும் நன்கு படும்படி தெளிக்கவும்.",
+        "source_title": "TNAU Agritech Portal - Cucurbits Disease Management",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Cucurbit Protection Manual & ICAR-IIVR Varanasi",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # STRAWBERRY (2 classes)
+    # -------------------------------------------------------------
+    "strawberry_leaf_scorch": {
+        "id": "strawberry_leaf_scorch",
+        "crop_id": "strawberry",
+        "name_en": "Strawberry Leaf Scorch (Diplocarpon)",
+        "name_ta": "ஸ்ட்ராபெர்ரி இலை தீய்ந்த நோய்",
+        "name_hi": "स्ट्रॉबेरी का लीफ स्कॉर्च रोग",
+        "pathogen": "Diplocarpon earlianum (Fungus)",
+        "symptoms_en": [
+            "Numerous small, irregular dark purple to red spots on upper leaf surfaces.",
+            "Unlike leaf spot, scorch spots never develop white or gray centers.",
+            "Spots coalesce rapidly, causing entire leaf blades to look scorched, dry, and curl upward."
+        ],
+        "symptoms_ta": [
+            "இலையின் மேல்புறத்தில் எண்ணற்ற சிறிய ஒழுங்கற்ற அடர் ஊதா அல்லது செம்பழுப்பு புள்ளிகள் தோன்றும்.",
+            "புள்ளிகள் ஒன்றுசேர்ந்து முழு இலையும் தீயில் கருகியது போல் சுருண்டு காய்ந்து விடும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर गहरे बैंगनी व लाल रंग के छोटे-छोटे धब्बे बनते हैं।",
+            "पूरी पत्ती जली हुई सी दिखती है और ऊपर की ओर मुड़ जाती है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, rainy weather (20-28°C) with persistent leaf wetness from overhead watering or morning fog.",
+            "description_ta": "மிதமான வெப்பம் மற்றும் மழை அல்லது பனி ஈரப்பதம்."
+        },
+        "prevention_en": [
+            "Plant certified, disease-free strawberry runners on raised beds with black plastic mulch.",
+            "Avoid overhead sprinkler irrigation; always use sub-surface drip.",
+            "Renovate beds after harvest by mowing, raking, and destroying old infected foliage."
+        ],
+        "prevention_ta": [
+            "சான்றளிக்கப்பட்ட நாற்றுகளை மேட்டுப்பாத்தியில் நிலப்போர்வை அமைத்து நடவு செய்யவும்.",
+            "சொட்டுநீர்ப் பாசனம் மட்டுமே பயன்படுத்தவும்; அறுவடைக்கு பின் பழைய இலைகளை வெட்டி அழிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar application of Copper Hydroxide @ 2 g/L or Trichoderma viride @ 5 g/L.",
+            "Chemical IPM (ICAR-CITH / TNAU): Spray Captan 50% WP @ 2.0 g/L (400 g/acre) or Azoxystrobin 23% SC @ 1 ml/L or Mancozeb 75% WP @ 2 g/L at early infection.",
+            "Observe pre-harvest interval of 7 days."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: காப்பர் ஹைட்ராக்சைடு 2 கிராம்/லிட்டர் அல்லது டிரைக்கோடெர்மா தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): கேப்டான் 50% WP ஏக்கருக்கு 400 கிராம் (2 கிராம்/லிட்டர்) கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 400.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Prompt removal of older infected leaves reduces disease spread by over 70%. Ensure beds have excellent drainage.",
+        "expert_advice_ta": "பாதிக்கப்பட்ட பழைய இலைகளை உடனுக்குடன் அகற்றுவது நோய் பரவுவதை 70% தடுக்கும்.",
+        "source_title": "ICAR-CITH Temperate Berry Protection Guide",
+        "source_org": "ICAR-CITH & TNAU Horticulture",
+        "reference": "ICAR-CITH & University of Florida IFAS Strawberry IPM",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "strawberry_healthy": {
+        "id": "strawberry_healthy",
+        "crop_id": "strawberry",
+        "name_en": "Healthy Strawberry Foliage",
+        "name_ta": "ஆரோக்கியமான ஸ்ட்ராபெர்ரி இலை",
+        "name_hi": "स्वस्थ स्ट्रॉबेरी की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Vibrant green, trifoliate leaves with serrated edges and no leaf spots, scorch, or powdery mildew.",
+            "Sturdy crowns, active runnering, and vigorous flower/fruit trusses."
+        ],
+        "symptoms_ta": [
+            "புள்ளிகள் அல்லது கருகல் இல்லாத பளபளப்பான அடர்பச்சை இலைகள்.",
+            "வீரியமான தளிர் மற்றும் பூ, காய் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Cool, sunny climate with raised bed mulch and well-drained sandy loam soil.",
+            "description_ta": "மிதமான குளிர், நல்ல சூரிய ஒளி மற்றும் மேட்டுப்பாத்தி சொட்டுநீர்."
+        },
+        "prevention_en": [
+            "Maintain plastic mulching to prevent soil splashing onto fruit.",
+            "Scout weekly for two-spotted spider mites and thrips.",
+            "Maintain balanced fertigation with calcium and potassium."
+        ],
+        "prevention_ta": [
+            "மண்ணிலிருந்து காய் மீது நீர் தெறிக்காமல் இருக்க நிலப்போர்வை பராமரிக்கவும்."
+        ],
+        "management_en": [
+            "No chemical fungicides required. Continue routine fertigation and blossom care."
+        ],
+        "management_ta": [
+            "மருந்து தெளிப்பு தேவையில்லை. வழக்கமான பாசனம் மற்றும் உரமிடுதலை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Foliage is healthy. Ensure adequate potassium and calcium fertigation during fruit development.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. பழம் வளரும் பருவத்தில் பொட்டாசியம் மற்றும் கால்சியம் உரமிடவும்.",
+        "source_title": "ICAR Berry Advisory",
+        "source_org": "ICAR-CITH",
+        "reference": "ICAR-CITH Strawberry Advisory",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # RASPBERRY & SOYBEAN (healthy classes)
+    # -------------------------------------------------------------
+    "raspberry_healthy": {
+        "id": "raspberry_healthy",
+        "crop_id": "raspberry",
+        "name_en": "Healthy Raspberry Foliage",
+        "name_ta": "ஆரோக்கியமான ராஸ்பெர்ரி இலை",
+        "name_hi": "स्वस्थ रसभरी की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Compound pinnate leaves with bright green color and no rust, cane blight, or mosaic mottling.",
+            "Erect, vigorous primocanes with healthy lateral fruiting branches."
+        ],
+        "symptoms_ta": [
+            "கருகல் அல்லது புள்ளிகள் இல்லாத ஆரோக்கியமான இலைகள் மற்றும் செழிப்பான கிளைகள்."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ और स्वस्थ पत्तियां।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Cool temperate climate, well-drained fertile loam rich in organic matter, and trellis support.",
+            "description_ta": "மிதமான குளிர் மற்றும் நல்ல வடிகால் வசதி."
+        },
+        "prevention_en": [
+            "Prune floricanes immediately after fruiting to improve airflow.",
+            "Maintain organic mulching and drip irrigation.",
+            "Scout for cane borers."
+        ],
+        "prevention_ta": [
+            "காய் பிடித்து முடிந்த பழைய கிளைகளை வெட்டி அகற்றவும்."
+        ],
+        "management_en": [
+            "No chemical treatment required. Maintain standard cane fruit management."
+        ],
+        "management_ta": [
+            "மருந்து தேவையில்லை. வழக்கமான பராமரிப்பு தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Canopy is healthy. Ensure post-harvest sanitation to protect next season primocanes.",
+        "expert_advice_ta": "தோட்டம் ஆரோக்கியமாக உள்ளது. வழக்கமான பராமரிப்பை தொடரவும்.",
+        "source_title": "ICAR-CITH Berry Production Guide",
+        "source_org": "ICAR-CITH Srinagar",
+        "reference": "ICAR-CITH Berry Manual",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "soybean_healthy": {
+        "id": "soybean_healthy",
+        "crop_id": "soybean",
+        "name_en": "Healthy Soybean Foliage",
+        "name_ta": "ஆரோக்கியமான சோயாபீன் இலை",
+        "name_hi": "स्वस्थ सोयाबीन की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Trifoliate leaves displaying rich uniform green color with no yellow mosaic, rust, or bacterial pustules.",
+            "Sturdy stems with abundant nodulation and prolific pod clusters."
+        ],
+        "symptoms_ta": [
+            "மஞ்சள் மொசைக் அல்லது துரு இல்லாத அடர்பச்சை இலைகள்.",
+            "வேர்களில் பாக்டீரியா முடிச்சுகள் மற்றும் செழிப்பான நெற்றுக்கள் கொண்ட ஆரோக்கியமான பயிர்."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm monsoon climate with well-aerated black or deep loamy soil.",
+            "description_ta": "மிதமான வெப்பம் மற்றும் நல்ல வடிகால் வசதியுள்ள கரிசல் மண்."
+        },
+        "prevention_en": [
+            "Inoculate seed with Bradyrhizobium japonicum @ 5 g/kg seed before sowing.",
+            "Maintain weed-free conditions during the first 45 days.",
+            "Monitor weekly for stem fly, semilooper, and whitefly vectors."
+        ],
+        "prevention_ta": [
+            "விதை நேர்த்திக்கு ரைசோபியம் மற்றும் பாஸ்போபாக்டீரியா பயன்படுத்தவும்.",
+            "முதல் 45 நாட்கள் களை இல்லாமல் பராமரிக்கவும்."
+        ],
+        "management_en": [
+            "No chemical fungicide needed. Maintain balanced phosphate and potash nutrition."
+        ],
+        "management_ta": [
+            "மருந்துகள் தேவையில்லை. சீரான பாசனம் மற்றும் களை மேலாண்மை செய்யவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Foliage is healthy. Ensure adequate soil moisture during pod filling stage.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. நெற்று பிடிக்கும் பருவத்தில் வறட்சி ஏற்படாமல் பார்த்துக் கொள்ளவும்.",
+        "source_title": "ICAR-Indian Institute of Soybean Research (IISR) Indore Guidelines",
+        "source_org": "ICAR-IISR Indore",
+        "reference": "ICAR-IISR Soybean Package of Practices",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # POTATO (3 classes)
+    # -------------------------------------------------------------
+    "potato_early_blight": {
+        "id": "potato_early_blight",
+        "crop_id": "potato",
+        "name_en": "Potato Early Blight (Alternaria)",
+        "name_ta": "உருளை ஆரம்பக்கால இலைக் கருகல் நோய்",
+        "name_hi": "आलू का अगेती झुलसा रोग",
+        "pathogen": "Alternaria solani (Fungus)",
+        "symptoms_en": [
+            "Dark brown to black circular lesions with characteristic concentric target-board rings on older foliage.",
+            "Yellow halo surrounding lesions; leaves turn yellow, senesce, and drop prematurely.",
+            "Tubers develop sunken, dark, leathery lesions with dry rot beneath the skin."
+        ],
+        "symptoms_ta": [
+            "கீழ் இலைகளில் வட்டமான செறிவூட்டப்பட்ட வளைய புள்ளிகள் (இலக்கு பலகை வளையங்கள்) தோன்றும்.",
+            "புள்ளிகளைச் சுற்றி மஞ்சள் வளையம் காணப்படும்; முதிர்ந்த இலைகள் காய்ந்து உதிரும்.",
+            "கிழங்கின் தோலில் கருமையான பள்ளங்கள் மற்றும் அழுகல் ஏற்படும்."
+        ],
+        "symptoms_hi": [
+            "पुरानी पत्तियों पर छल्लेदार गोल भूरे धब्बे बनते हैं।",
+            "पत्तियां पीली होकर सूखने लगती हैं और कंद पर सूखे घाव पड़ते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm temperatures (24-29°C) alternating with wet and dry periods and heavy dew.",
+            "description_ta": "மிதமான வெப்பம் (24-29°C) மற்றும் இரவு நேர பனிப்பொழிவு."
+        },
+        "prevention_en": [
+            "Plant certified disease-free seed tubers.",
+            "Practice 2-3 year crop rotation with non-solanaceous crops.",
+            "Maintain balanced nitrogen to prevent premature vine senescence."
+        ],
+        "prevention_ta": [
+            "சான்றளிக்கப்பட்ட விதைக்கிழங்குகளைப் பயன்படுத்தவும்.",
+            "தக்காளி, கத்தரி அல்லாத மாற்றுப் பயிர்களுடன் பயிர் சுழற்சி செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Trichoderma viride @ 5 g/L or 5% Neem Seed Kernel Extract (NSKE).",
+            "Chemical IPM (ICAR-CPRI / TNAU): Spray Mancozeb 75% WP @ 2.0 g/L (400-500 g/acre) or Chlorothalonil 75% WP @ 2.0 g/L at first appearance of spots.",
+            "Repeat at 10-12 day intervals if conditions remain favorable."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: 5% வேப்பங்கொட்டை சாறு அல்லது டிரைக்கோடெர்மா 5 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (CPRI / TNAU): மேன்கோசெப் 75% WP ஏக்கருக்கு 400-500 கிராம் (2 கிராம்/லிட்டர்) கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 450.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Avoid water stress during tuber bulking as stressed plants are highly susceptible to early blight.",
+        "expert_advice_ta": "கிழங்கு ஊறும் பருவத்தில் பயிர் வாடாமல் சீரான பாசனம் செய்யவும்.",
+        "source_title": "ICAR-Central Potato Research Institute (CPRI) Shimla",
+        "source_org": "ICAR-CPRI & TNAU Agritech",
+        "reference": "ICAR-CPRI Potato Disease Bulletin & TNAU Package of Practices",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "potato_late_blight": {
+        "id": "potato_late_blight",
+        "crop_id": "potato",
+        "name_en": "Potato Late Blight (Phytophthora)",
+        "name_ta": "உருளை பிற்பருவ இலைக் கருகல் நோய்",
+        "name_hi": "आलू का पछेती झुलसा रोग",
+        "pathogen": "Phytophthora infestans (Oomycete)",
+        "symptoms_en": [
+            "Water-soaked irregular pale-to-dark brown lesions rapidly spreading across leaves and petioles.",
+            "White downy mildew growth visible on the underside of leaves during humid mornings.",
+            "Foliage collapses and rots rapidly with a distinct foul odor in 3-5 days during foggy rain.",
+            "Tubers develop irregular copper-brown dry rot extending deep into the flesh."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் நீர் ஊறிய கரும்பழுப்பு நிற அழுகல் புள்ளிகள் வேகமாகப் பரவும்.",
+            "ஈரப்பதமான காலையில் இலைகளின் அடியில் வெள்ளை பூஞ்சை படலம் தோன்றும்.",
+            "தொடர் பனியில் பயிர் முழுவதும் தீயில் கருகியது போல் நாற்றத்துடன் அழுகிவிடும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर जलसिक्त भूरे-काले धब्बे तेजी से फैलते हैं।",
+            "पत्ती के नीचे सफेद फफूंद दिखती है।",
+            "पूरी फसल पाले की तरह झुलसकर सड़ जाती है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Cool temperatures (12-18°C) with continuous relative humidity >90% and prolonged cloud cover.",
+            "description_ta": "குளிர்ந்த தட்பவெப்பநிலை (12-18°C) மற்றும் தொடர் பனிமூட்டம் அல்லது மழை."
+        },
+        "prevention_en": [
+            "Plant late blight-resistant varieties (e.g., Kufri Girdhari, Kufri Himalini).",
+            "Earth-up potato ridges thoroughly to protect tubers from washed-down sporangia.",
+            "Dehaulm (cut and destroy vines) 10-12 days before harvest to prevent tuber infection."
+        ],
+        "prevention_ta": [
+            "நோய் எதிர்ப்பு ரகங்களை பயிரிடவும்; கிழங்கு வெளியில் தெரியாதவாறு நன்கு மண் அணைக்கவும்.",
+            "அறுவடைக்கு 10 நாட்களுக்கு முன் செடியின் தாள்களை வெட்டி அகற்றவும்."
+        ],
+        "management_en": [
+            "Bio-control: Prophylactic spray of 1% Bordeaux mixture before fog sets in.",
+            "Chemical IPM (ICAR-CPRI / TNAU): Apply Cymoxanil 8% + Mancozeb 64% WP @ 2.0 g/L (400-500 g/acre) or Dimethomorph 50% WP @ 1.0 g/L at the very first sign of blight.",
+            "Repeat every 7 days during continuous overcast humid weather."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: 1% போர்டோ கலவை முன்னெச்சரிக்கையாக தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட மருந்து (CPRI / TNAU): சைமாக்சனில் + மேன்கோசெப் ஏக்கருக்கு 450 கிராம் (2 கிராம்/லிட்டர்) கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 2.0,
+        "chemical_grams_per_acre": 450.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Late blight is devastating. Apply systemic fungicides immediately upon forecast of cloudy rain spells.",
+        "expert_advice_ta": "பனிமூட்டம் தொடங்கும் முன்பே பாதுகாப்பு மருந்து தெளிப்பது மிக அவசியமாகும்.",
+        "source_title": "ICAR-Central Potato Research Institute (CPRI) Disease Advisory",
+        "source_org": "ICAR-CPRI Shimla & TNAU Agritech",
+        "reference": "ICAR-CPRI Late Blight Management System & TNAU",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "potato_healthy": {
+        "id": "potato_healthy",
+        "crop_id": "potato",
+        "name_en": "Healthy Potato Foliage",
+        "name_ta": "ஆரோக்கியமான உருளைக்கிழங்கு இலை",
+        "name_hi": "स्वस्थ आलू की पत्तियां",
+        "pathogen": "None (Plant is healthy)",
+        "symptoms_en": [
+            "Vibrant, dark green canopy with sturdy stems and no water-soaked lesions or blight spotting.",
+            "Clean leaf undersides free from fungal mildew or aphid colonies."
+        ],
+        "symptoms_ta": [
+            "கருகல் அல்லது புள்ளிகள் இல்லாத பசுமையான ஆரோக்கியமான இலைகள்.",
+            "வலுவான தண்டு மற்றும் செழிப்பான பயிர் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Cool, sunny weather with loose, well-drained sandy loam soil and proper ridge earthing.",
+            "description_ta": "மிதமான குளிர் மற்றும் நல்ல வடிகால் வசதியுள்ள மண்."
+        },
+        "prevention_en": [
+            "Maintain regular earthing-up to prevent tuber greening and moth infestation.",
+            "Scout twice weekly during cloudy weather for early signs of blight.",
+            "Avoid overhead irrigation; use furrow or drip irrigation."
+        ],
+        "prevention_ta": [
+            "வழக்கமான மண் அணைத்தல் மற்றும் பாசனத்தை தொடரவும்."
+        ],
+        "management_en": [
+            "No chemical fungicides required. Maintain balanced nutrition (NPK 120:120:120)."
+        ],
+        "management_ta": [
+            "மருந்து தெளிப்பு தேவையில்லை. சீரான உர மேலாண்மை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Foliage is healthy. Monitor weather forecasts and keep protective fungicide ready if fog is predicted.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. பனிமூட்ட முன்னறிவிப்பு வந்தால் பாதுகாப்பு மருந்து தெளிக்கவும்.",
+        "source_title": "ICAR-CPRI Package of Practices",
+        "source_org": "ICAR-CPRI Shimla",
+        "reference": "ICAR-CPRI & TNAU Potato Manual",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # CHILLI / PEPPER (2 classes)
+    # -------------------------------------------------------------
+    "chilli_bacterial_spot": {
+        "id": "chilli_bacterial_spot",
+        "crop_id": "chilli",
+        "name_en": "Bacterial Spot (Xanthomonas)",
+        "name_ta": "பாக்டீரியா இலைப்புள்ளி நோய்",
+        "name_hi": "जीवाणु धब्बा रोग",
+        "pathogen": "Xanthomonas campestris pv. vesicatoria (Bacterium)",
+        "symptoms_en": [
+            "Small, circular to irregular water-soaked spots on leaves that turn dark brown with greasy margins.",
+            "Spots become necrotic, drop out (shothole), and cause heavy lower defoliation.",
+            "Fruit develops blister-like, raised rough brown warts that reduce market quality."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் நீர் ஊறிய சிறிய புள்ளிகள் தோன்றி, பழுப்பு நிறமாக மாறும்.",
+            "இலைகள் காய்ந்து உதிரும்; காய்களில் கரடுமுரடான கொப்புளப் புள்ளிகள் ஏற்படும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर जलसिक्त छोटे भूरे धब्बे बनते हैं।",
+            "पत्तियां गिर जाती हैं और फलों पर उभरे हुए खुरदुरे छाले पड़ते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm temperatures (24-30°C) with frequent rain showers, wind-driven moisture, and heavy dew.",
+            "description_ta": "மிதமான வெப்பம் (24-30°C) மற்றும் மழை தூறல் அல்லது பனிப்பொழிவு."
+        },
+        "prevention_en": [
+            "Soak seeds in hot water at 50°C for 25 minutes or in 1% sodium hypochlorite before sowing.",
+            "Practice 2-year crop rotation avoiding solanaceous crops (tomato, potato, eggplant).",
+            "Use drip irrigation to prevent water splashing from soil to foliage."
+        ],
+        "prevention_ta": [
+            "விதை நேர்த்தி செய்து நடவு செய்யவும்; சொட்டுநீர்ப் பாசனம் அமைக்கவும்.",
+            "தக்காளி, கத்தரி இல்லாத மாற்றுப் பயிர் சுழற்சி செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Seed treatment and foliar spray with Pseudomonas fluorescens @ 5 g/L.",
+            "Chemical IPM (TNAU / ICAR-IIVR): Spray Copper Oxychloride 50% WP @ 2.5 g/L (500 g/acre) + Streptocycline @ 0.1 g/L (20 g/acre) at first symptom onset.",
+            "Repeat at 12-day intervals during wet weather."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: சூடோமோனாஸ் புளோரசன்ஸ் 5 கிராம்/லிட்டர் நீரில் கலந்து தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட மருந்து (TNAU): காப்பர் ஆக்சிகுளோரைடு 500 கிராம் + ஸ்ட்ரெப்டோசைக்ளின் 20 கிராம் ஏக்கருக்கு கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 520.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Combine copper with streptocycline to overcome bacterial tolerance. Apply early before lesions become widespread.",
+        "expert_advice_ta": "காப்பர் மருந்துடன் ஸ்ட்ரெப்டோசைக்ளின் சேர்த்து தெளிப்பது பாக்டீரியாவை முழுமையாக கட்டுப்படுத்தும்.",
+        "source_title": "TNAU Agritech Portal - Chilli Disease Management",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Chilli Crop Protection Guide & ICAR-IIVR",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "chilli_healthy": {
+        "id": "chilli_healthy",
+        "crop_id": "chilli",
+        "name_en": "Healthy Bell Pepper / Chilli Leaf",
+        "name_ta": "ஆரோக்கியமான மிளகாய் இலை",
+        "name_hi": "स्वस्थ मिर्च की पत्ती",
+        "pathogen": "None (Healthy Foliage)",
+        "symptoms_en": [
+            "Lush, glossy green foliage without mottling, curling, or necrotic spotting.",
+            "Sturdy branching with abundant white flowers and healthy fruit setting."
+        ],
+        "symptoms_ta": [
+            "சுருட்டல் அல்லது கருகல் இல்லாத பளபளப்பான பச்சை இலைகள்.",
+            "ஆரோக்கியமான பூக்கள் மற்றும் காய் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, sunny weather (20-30°C) with well-drained loam and drip fertigation.",
+            "description_ta": "மிதமான வெப்பம் மற்றும் நல்ல வடிகால் வசதி."
+        },
+        "prevention_en": [
+            "Maintain blue and yellow sticky traps (15 traps/acre) to monitor thrips and whiteflies.",
+            "Apply balanced NPK with micronutrients (Zinc and Boron) to prevent flower drop.",
+            "Ensure uniform soil moisture."
+        ],
+        "prevention_ta": [
+            "இலைப்பேன் மற்றும் அசுவினியைக் கண்காணிக்க ஒட்டும் பொறிகளைப் பயன்படுத்தவும்."
+        ],
+        "management_en": [
+            "No chemical fungicides needed. Continue routine irrigation and balanced nutrition."
+        ],
+        "management_ta": [
+            "மருந்து தெளிப்பு தேவையில்லை. வழக்கமான பாசனம் மற்றும் உரமிடுதலை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Crop is healthy. Spray Boron @ 1 g/L during peak flowering to prevent blossom drop.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. பூ உதிர்வதைத் தடுக்க போரான் 1 கிராம்/லிட்டர் தெளிக்கவும்.",
+        "source_title": "TNAU Agritech Chilli Package",
+        "source_org": "TNAU",
+        "reference": "TNAU Agritech Portal",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # TOMATO (10 classes)
+    # -------------------------------------------------------------
+    "tomato_bacterial_spot": {
+        "id": "tomato_bacterial_spot",
+        "crop_id": "tomato",
+        "name_en": "Tomato Bacterial Spot (Xanthomonas)",
+        "name_ta": "தக்காளி பாக்டீரியா இலைப்புள்ளி நோய்",
+        "name_hi": "टमाटर का जीवाणु धब्बा रोग",
+        "pathogen": "Xanthomonas perforans (Bacterium)",
+        "symptoms_en": [
+            "Small (under 3 mm), dark brown, water-soaked circular to irregular lesions with greasy margins.",
+            "Centers become dry, necrotic, and tear away easily, leaving a ragged appearance.",
+            "Fruit develops scabby, raised brown blisters surrounded by a white halo."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் நீர் ஊறிய சிறிய கரும்பழுப்பு நிற புள்ளிகள் தோன்றும்.",
+            "புள்ளிகள் காய்ந்து துளைகளாக மாறும்; தீவிர பாதிப்பில் இலைகள் கருகி உதிரும்.",
+            "காய்களில் சொறி போன்ற பழுப்பு நிற கொப்புளங்கள் தோன்றும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर जलसिक्त छोटे गहरे भूरे धब्बे बनते हैं।",
+            "पत्तियां सूखकर फट जाती हैं और फलों पर खुरदुरे छाले पड़ते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm temperatures (24-30°C) with persistent high humidity and wind-driven rain.",
+            "description_ta": "மிதமான வெப்பம் (24-30°C) மற்றும் காற்றுடன் கூடிய மழை அல்லது தெளிப்பு நீர் பாசனம்."
+        },
+        "prevention_en": [
+            "Use certified disease-free seed and soak in 1% sodium hypochlorite for 15 minutes before sowing.",
+            "Avoid overhead irrigation; use drip to prevent bacterial splash dispersal.",
+            "Disinfect pruning tools between plants."
+        ],
+        "prevention_ta": [
+            "சான்றளிக்கப்பட்ட விதைகளைப் பயன்படுத்தவும்; சொட்டுநீர்ப் பாசனம் அமைக்கவும்.",
+            "கவாத்து செய்யும் கருவிகளை கிருமி நீக்கம் செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Pseudomonas fluorescens @ 5 g/L or Bacillus subtilis @ 5 g/L.",
+            "Chemical IPM (TNAU / ICAR-IIVR): Apply Copper Hydroxide 77% WP @ 2.0 g/L (400 g/acre) + Streptocycline @ 0.1 g/L (20 g/acre) at first symptom appearance.",
+            "Repeat at 10-12 day intervals if rainy weather persists."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: சூடோமோனாஸ் 5 கிராம்/லிட்டர் நீரில் கலந்து தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட மருந்து (TNAU): காப்பர் ஹைட்ராக்சைடு 400 கிராம் + ஸ்ட்ரெப்டோசைக்ளின் 20 கிராம் ஏக்கருக்கு கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 420.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Always combine copper with an antibiotic like streptocycline to overcome widespread copper tolerance in Xanthomonas strains.",
+        "expert_advice_ta": "காப்பர் மருந்துடன் ஸ்ட்ரெப்டோசைக்ளின் கலந்து தெளிப்பது முழுமையான பலன் தரும்.",
+        "source_title": "TNAU Agritech Portal - Tomato Bacterial Diseases",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Vegetable Protection Manual & ICAR-IIVR Varanasi",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_early_blight": {
+        "id": "tomato_early_blight",
+        "crop_id": "tomato",
+        "name_en": "Tomato Early Blight (Alternaria)",
+        "name_ta": "தக்காளி ஆரம்பக்கால இலைக் கருகல் நோய்",
+        "name_hi": "टमाटर का अगेती झुलसा रोग",
+        "pathogen": "Alternaria solani (Fungus)",
+        "symptoms_en": [
+            "Dark brown to black spots with characteristic concentric rings (target board pattern) on older foliage.",
+            "Yellow halo surrounding the circular necrotic lesions.",
+            "Lower leaves dry up, turn brown, and drop prematurely, causing sunscald on developing fruit."
+        ],
+        "symptoms_ta": [
+            "கீழ் இலைகளில் வட்ட வடிவ அடர் பழுப்பு நிற புள்ளிகள் தோன்றும் (இலக்கு பலகை போன்ற வளையங்கள்).",
+            "புள்ளிகளைச் சுற்றி மஞ்சள் வளையம் காணப்படும்.",
+            "முதிர்ந்த இலைகள் காய்ந்து உதிர்ந்து விடும்; காய்களில் வெயில் வெம்புதல் ஏற்படும்."
+        ],
+        "symptoms_hi": [
+            "पुरानी पत्तियों पर छल्लेदार गोल गहरे भूरे धब्बे बनते हैं।",
+            "धब्बों के चारों ओर पीला घेरा होता है और पत्तियां सूखकर गिर जाती हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm temperatures (24-29°C) with high relative humidity (>80%) and prolonged leaf wetness.",
+            "description_ta": "மிதமான வெப்பநிலை (24-29°C), அதிக ஈரப்பதம் (80% மேல்)."
+        },
+        "prevention_en": [
+            "Maintain 60x45 cm plant spacing to ensure air circulation and rapid canopy drying.",
+            "Use drip irrigation instead of overhead watering.",
+            "Mulch soil around plants to prevent pathogen spores from splashing onto lower leaves.",
+            "Practice 2-3 year crop rotation with non-solanaceous crops."
+        ],
+        "prevention_ta": [
+            "செடிகளுக்கு இடையே போதிய இடைவெளி விட்டு காற்றோட்டத்தை பராமரிக்கவும்.",
+            "சொட்டுநீர்ப் பாசனம் மற்றும் நிலப்போர்வை அமைக்கவும்; மாற்றுப் பயிர் சுழற்சி செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Pseudomonas fluorescens @ 5 g/L or Trichoderma viride @ 5 g/L at 15-day intervals.",
+            "Organic: Spray 5% Neem Seed Kernel Extract (NSKE) or cow urine with turmeric powder solution.",
+            "Chemical IPM (TNAU / ICAR): Apply Mancozeb 75% WP @ 2.0 g/L (400-500 g/acre) or Chlorothalonil 75% WP @ 2.0 g/L.",
+            "Prune infected bottom leaves and dispose of them outside the field."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: சூடோமோனாஸ் 5 கிராம்/லிட்டர் நீரில் கலந்து 15 நாட்கள் இடைவெளியில் தெளிக்கவும்.",
+            "இயற்கை வழி: 5% வேப்பங்கொட்டை சாறு (NSKE) தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): மேன்கோசெப் 75% WP ஏக்கருக்கு 400-500 கிராம் (2 கிராம்/லிட்டர்) கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 450.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "If disease spreads to more than 20% of canopy during fruit set, consult your local Krishi Vigyan Kendra (KVK).",
+        "expert_advice_ta": "காய் பிடிக்கும் பருவத்தில் நோய் 20% மேல் பரவினால் உடனே வட்டார வேளாண்மை அலுவலரை அணுகவும்.",
+        "source_title": "TNAU Crop Protection Guide & ICAR IPM Manual",
+        "source_org": "TNAU & ICAR",
+        "reference": "TNAU Agritech Portal & ICAR-IIVR Tomato Compendium",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_late_blight": {
+        "id": "tomato_late_blight",
+        "crop_id": "tomato",
+        "name_en": "Tomato Late Blight (Phytophthora)",
+        "name_ta": "தக்காளி பிற்பருவ இலைக் கருகல் நோய்",
+        "name_hi": "टमाटर का पछेती झुलसा रोग",
+        "pathogen": "Phytophthora infestans (Oomycete)",
+        "symptoms_en": [
+            "Water-soaked irregular pale-to-dark brown lesions rapidly enlarging across leaves and stems.",
+            "White velvety fungal/mildew growth on the underside of leaves during humid morning hours.",
+            "Greasy, water-soaked brown patches on green fruit that turn rough and rot quickly.",
+            "Entire foliage looks frost-bitten or scorched in 3 to 5 days under continuous cool, wet weather."
+        ],
+        "symptoms_ta": [
+            "இலைகள் மற்றும் தண்டுகளில் நீர் ஊறிய கரும்பழுப்பு நிற புள்ளிகள் வேகமாகப் பரவும்.",
+            "ஈரப்பதமான காலை வேளையில் இலைகளின் அடிப்பகுதியில் வெள்ளை நிற பூஞ்சை படிவம் தோன்றும்.",
+            "பச்சை காய்களில் பழுப்பு நிற அழுகல் திட்டுகள் உருவாகி காய் அழுகி விடும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों और तनों पर जलसिक्त बड़े भूरे-काले धब्बे तेजी से फैलते हैं।",
+            "पत्ती की निचली सतह पर सफेद फफूंद दिखती है।",
+            "कच्चे फलों पर भूरे रंग के धब्बे पड़ते हैं और पूरी फसल झुलस जाती है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Cool temperatures (12-18°C) combined with high relative humidity (>90%) and continuous leaf wetness.",
+            "description_ta": "குளிர்ந்த தட்பவெப்பநிலை (12-18°C) மற்றும் அதிக பனிப்பொழிவு அல்லது மழை."
+        },
+        "prevention_en": [
+            "Use certified disease-resistant tomato hybrids.",
+            "Avoid planting near potato fields that harbor late blight.",
+            "Stake plants and prune lower suckers to maintain distance from moist soil."
+        ],
+        "prevention_ta": [
+            "நோய் எதிர்ப்பு ரகங்களை பயிரிடவும்; உருளைக்கிழங்கு வயலுக்கு அருகில் தக்காளி பயிரிடுவதை தவிர்க்கவும்.",
+            "செடிகளை குச்சிகள் நட்டு கட்டி வைக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Prophylactic spray of 1% Bordeaux mixture before onset of rainy spells.",
+            "Chemical IPM (TNAU / ICAR): Apply Cymoxanil 8% + Mancozeb 64% WP @ 2.0 g/L (400-500 g/acre) or Dimethomorph 50% WP @ 1.0 g/L (200 g/acre) at first symptom onset.",
+            "Repeat at 7-day intervals if cool, humid weather continues."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: 1% போர்டோ கலவை முன்னெச்சரிக்கையாக தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): சைமாக்சனில் + மேன்கோசெப் ஏக்கருக்கு 450 கிராம் (2 கிராம்/லிட்டர்) கலந்து உடனே தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 2.0,
+        "chemical_grams_per_acre": 450.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Late blight spreads rapidly. Spray systemic fungicides immediately upon finding first greasy lesions.",
+        "expert_advice_ta": "தக்காளி பிற்பருவ கருகல் அதிவேகமாக பரவக்கூடியது; அறிகுறிகள் தெரிந்த உடனே தீவிர நடவடிக்கை எடுக்கவும்.",
+        "source_title": "TNAU Agritech Portal - Tomato Late Blight Advisory",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Agritech Portal & ICAR-IIVR Tomato Compendium",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_leaf_mold": {
+        "id": "tomato_leaf_mold",
+        "crop_id": "tomato",
+        "name_en": "Tomato Leaf Mold (Passalora fulva)",
+        "name_ta": "தக்காளி இலை பூஞ்சை நோய்",
+        "name_hi": "टमाटर का पत्ती फफूंद रोग",
+        "pathogen": "Passalora fulva / Cladosporium fulvum (Fungus)",
+        "symptoms_en": [
+            "Pale green to yellowish chlorotic spots on upper leaf surfaces with indistinct margins.",
+            "Olive-green to velvety brown mold growth develops on the corresponding underside of the leaf.",
+            "Infected leaves curl, wither, and drop prematurely, starting from the lower canopy."
+        ],
+        "symptoms_ta": [
+            "இலையின் மேல்புறத்தில் வெளிர் பச்சை அல்லது மஞ்சள் நிற திட்டுகள் தோன்றும்.",
+            "இலையின் அடிப்பகுதியில் வெல்வெட் போன்ற அடர் பழுப்பு நிற பூஞ்சை படிவம் உருவாகும்.",
+            "இலைகள் சுருண்டு காய்ந்து உதிரும்."
+        ],
+        "symptoms_hi": [
+            "पत्ती की ऊपरी सतह पर हल्के पीले धब्बे बनते हैं।",
+            "पत्ती के नीचे मखमली भूरी फफूंद जम जाती है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm temperatures (20-25°C) with prolonged relative humidity (>85%) in polyhouses or crowded fields.",
+            "description_ta": "மிதமான வெப்பநிலை (20-25°C) மற்றும் பசுமைக்குடில் அல்லது அடர்ந்த நடவில் அதிக ஈரப்பதம் (85% மேல்)."
+        },
+        "prevention_en": [
+            "Increase greenhouse or field ventilation to keep relative humidity below 80%.",
+            "Prune lower suckers and increase spacing to allow canopy air movement.",
+            "Avoid wetting foliage during late evening irrigation."
+        ],
+        "prevention_ta": [
+            "காற்றோட்டத்தை அதிகரிக்க கீழ் இலைகளை கவாத்து செய்யவும்.",
+            "மாலையில் இலைகள் நனையுமாறு நீர் பாய்ச்சுவதை தவிர்க்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar application of Trichoderma viride @ 5 g/L or Wettable Sulfur @ 2 g/L.",
+            "Chemical IPM (TNAU): Apply Difenoconazole 25% EC @ 1 ml/L (200 ml/acre) or Chlorothalonil 75% WP @ 2 g/L.",
+            "Ensure spray thoroughly covers the undersides of leaves."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: நனையும் கந்தகம் 2 கிராம்/லிட்டர் அல்லது டிரைக்கோடெர்மா 5 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): டைபினோகொனசோல் 25% EC ஏக்கருக்கு 200 மி.லி (1 மி.லி/லிட்டர்) கலந்து இலைகளின் அடியில் படும்படி தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 200.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Leaf mold thrives in stagnant humid air. Ventilating polyhouses can arrest disease progression naturally.",
+        "expert_advice_ta": "காற்றோட்டம் இல்லாத இடங்களில் இந்நோய் வேகமாகப் பரவும்; நல்ல காற்றோட்டம் அமைப்பதே சிறந்த தீர்வு.",
+        "source_title": "TNAU Agritech Portal - Protected Cultivation Disease Guide",
+        "source_org": "TNAU & ICAR-IIVR",
+        "reference": "TNAU Protected Cultivation Manual & ICAR Vegetable Pathology",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_septoria_leaf_spot": {
+        "id": "tomato_septoria_leaf_spot",
+        "crop_id": "tomato",
+        "name_en": "Tomato Septoria Leaf Spot",
+        "name_ta": "தக்காளி செப்டோரியா இலைப்புள்ளி நோய்",
+        "name_hi": "टमाटर का सेप्टोरिया पत्ती धब्बा रोग",
+        "pathogen": "Septoria lycopersici (Fungus)",
+        "symptoms_en": [
+            "Numerous small, circular spots (1.5 to 3 mm) with dark brown margins and sunken grayish-white centers.",
+            "Tiny black specks (pycnidia) clearly visible in the center of mature spots.",
+            "Severely affected leaves turn yellow, die, and drop, exposing developing fruit to sunscald."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் ஏராளமான சிறிய வட்ட புள்ளிகள் (1.5 முதல் 3 மி.மீ) தோன்றும் (விளிம்பில் கரும்பழுப்பு, மத்தியில் சாம்பல்-வெள்ளை).",
+            "புள்ளிகளின் மையத்தில் சிறிய கருப்பு துகள்கள் காணப்படும்.",
+            "இலைகள் மஞ்சளாகி உதிர்ந்து பழங்கள் வெயிலில் கருகும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर छोटे-छोटे गोल धब्बे बनते हैं (किनारे गहरे भूरे, बीच में भूरे-सफेद)।",
+            "धब्बों के बीच में छोटे काले बिंदु दिखते हैं और पत्तियां झड़ जाती हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, wet weather (20-26°C) with persistent humidity and rain splash dispersal.",
+            "description_ta": "மிதமான வெப்பம் (20-26°C) மற்றும் மழைத்துளிகள் மண்ணிலிருந்து இலைக்கு தெறித்தல்."
+        },
+        "prevention_en": [
+            "Plow under or destroy crop debris immediately after harvest.",
+            "Apply straw or plastic mulch to create a physical barrier preventing rain splash of soil spores.",
+            "Stake plants and do not work in wet fields to prevent spore spread."
+        ],
+        "prevention_ta": [
+            "நிலப்போர்வை அமைத்து மழைத்துளிகள் மண்ணிலிருந்து இலைகளில் தெறிப்பதைத் தடுக்கவும்.",
+            "செடிகளை குச்சிகள் நட்டு உயர்த்தி வளர்க்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar application of Pseudomonas fluorescens @ 5 g/L or 5% Neem extract.",
+            "Chemical IPM (TNAU / ICAR): Spray Mancozeb 75% WP @ 2 g/L (400-500 g/acre) or Chlorothalonil 75% WP @ 2 g/L at first sign of lower leaf spotting.",
+            "Repeat every 10-14 days during wet conditions."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: சூடோமோனாஸ் 5 கிராம்/லிட்டர் அல்லது 5% வேப்பங்கொட்டை சாறு தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): மேன்கோசெப் 75% WP ஏக்கருக்கு 400 கிராம் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 400.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Septoria attacks leaves and stems but rarely fruit directly. However, loss of foliage severely reduces yield and fruit quality.",
+        "expert_advice_ta": "செப்டோரியா பழங்களை நேரடியாகத் தாக்காது என்றாலும் இலைகளை அழித்து விளைச்சலை பெருமளவு குறைக்கும்.",
+        "source_title": "TNAU Agritech Portal - Tomato Diseases",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Crop Protection Compendium & ICAR-IIVR",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_spider_mites": {
+        "id": "tomato_spider_mites",
+        "crop_id": "tomato",
+        "name_en": "Tomato Two-Spotted Spider Mite Damage",
+        "name_ta": "தக்காளி சிவப்பு சிலந்திப் பேன் தாக்குதல்",
+        "name_hi": "टमाटर का लाल मकड़ी (माइट) प्रकोप",
+        "pathogen": "Tetranychus urticae (Arachnid Pest)",
+        "symptoms_en": [
+            "Fine yellow or white stippling (speckling) on the upper surface of leaves.",
+            "Leaves turn bronze, yellow, and dry up under heavy infestation.",
+            "Fine silky webbing visible on the undersides of leaves and growing tips where colonies swarm."
+        ],
+        "symptoms_ta": [
+            "இலைகளின் மேல்புறத்தில் சிறிய மஞ்சள் அல்லது வெள்ளை நிற புள்ளிகள் தோன்றும்.",
+            "இலையின் அடிப்பகுதியில் மெல்லிய சிலந்தி வலைகள் பின்னப்பட்டிருக்கும்.",
+            "இலைகள் வெளிறி, காய்ந்து சருகாகி உதிரும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों की ऊपरी सतह पर हल्के पीले-सफेद बिंदु बनते हैं।",
+            "पत्ती के नीचे महीन जाला दिखता है और पत्तियां सूख जाती हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Hot, dry, dusty weather (>30°C) with low relative humidity that accelerates mite reproduction cycles.",
+            "description_ta": "வறண்ட, வெப்பமான வானிலை (30°C மேல்) மற்றும் காற்றில் ஈரப்பதம் குறைவு."
+        },
+        "prevention_en": [
+            "Maintain overhead misting or sprinkle water on field borders to reduce dust and increase humidity.",
+            "Conserve natural predatory mites (Phytoseiidae) and ladybird beetles (Stethorus).",
+            "Avoid unnecessary broad-spectrum pyrethroid sprays that destroy natural mite predators."
+        ],
+        "prevention_ta": [
+            "தோட்டத்தில் தூசி படியாமல் ஈரப்பதத்தை பராமரிக்கவும்.",
+            "நன்மை செய்யும் பொறிவண்டுகளைப் பாதுகாக்கவும்; தேவையற்ற தீவிர பூச்சிக்கொல்லிகளைத் தவிர்க்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Azadirachtin 10000 ppm @ 2 ml/L or 2% insecticidal soap spray.",
+            "Chemical Acaricide (TNAU / CIBRC): Apply Spiromesifen 22.9% SC @ 1.0 ml/L (200 ml/acre) or Fenazaquin 10% EC @ 1.5 ml/L (300 ml/acre).",
+            "Spray with high pressure targeting the undersides of leaves where mites reside."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: அசாடிராக்டின் (10000 ppm) 2 மி.லி/லிட்டர் அல்லது வேப்பெண்ணெய் 5 மி.லி/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட சிலந்திக்கொல்லி (TNAU / CIBRC): ஸ்பைரோமெசிபேன் 22.9% SC ஏக்கருக்கு 200 மி.லி (1 மி.லி/லிட்டர்) இலைகளின் அடியில் நன்கு படும்படி தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 200.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Spider mites develop resistance rapidly. Never apply the same chemical acaricide class consecutively.",
+        "expert_advice_ta": "சிலந்திப் பேன்கள் எளிதில் எதிர்ப்புத் திறன் பெறும்; ஒரே ரசாயன மருந்தை தொடர்ந்து பயன்படுத்த வேண்டாம்.",
+        "source_title": "TNAU Agritech Portal - Tomato Acaricide Management",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Entomology Advisory & CIBRC Approved Acaricides",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_target_spot": {
+        "id": "tomato_target_spot",
+        "crop_id": "tomato",
+        "name_en": "Tomato Target Spot (Corynespora)",
+        "name_ta": "தக்காளி இலக்கு புள்ளி நோய்",
+        "name_hi": "टमाटर का टारगेट स्पॉट रोग",
+        "pathogen": "Corynespora cassiicola (Fungus)",
+        "symptoms_en": [
+            "Pinpoint brown spots enlarging into circular lesions with light brown centers and dark concentric rings (target pattern).",
+            "Lesions cause severe foliar blighting and premature defoliation in lower canopy.",
+            "Fruit develops small, sunken, brown necrotic craters with dark margins."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் வளைய வடிவிலான பழுப்பு நிற புள்ளிகள் தோன்றும்.",
+            "கீழ் இலைகள் வேகமாக கருகி உதிரும்; காய்களில் கரும்பழுப்பு பள்ளங்கள் தோன்றும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर संकेन्द्री छल्लों वाले भूरे गोल धब्बे बनते हैं।",
+            "पत्तियां तेजी से सूखकर गिरती हैं और फलों पर गहरे धंसे हुए घाव होते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, humid conditions (20-28°C) with prolonged canopy wetness and high rainfall.",
+            "description_ta": "மிதமான வெப்பம் (20-28°C) மற்றும் தொடர் காற்றில் ஈரப்பதம்."
+        },
+        "prevention_en": [
+            "Ensure proper vine trellising and sucker pruning to improve airflow.",
+            "Avoid overhead irrigation; use drip to prevent spreading fungal conidia.",
+            "Rotate crops with non-hosts like maize or sorghum."
+        ],
+        "prevention_ta": [
+            "செடிகளை குச்சிகள் நட்டு கட்டி காற்றோட்டத்தை அதிகரிக்கவும்.",
+            "சொட்டுநீர்ப் பாசனம் அமைக்கவும்; மக்காச்சோளம் போன்ற பயிர்களுடன் பயிர் சுழற்சி செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Bacillus subtilis or Trichoderma viride @ 5 g/L.",
+            "Chemical IPM (TNAU / ICAR): Apply Azoxystrobin 18.2% + Difenoconazole 11.4% SC @ 1 ml/L (200 ml/acre) or Chlorothalonil 75% WP @ 2 g/L.",
+            "Repeat at 10-12 day intervals if warm humid conditions persist."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: பேசிலஸ் சப்டிலிஸ் 5 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): அசோக்சிஸ்ட்ரோபின் + டைபினோகொனசோல் 1 மி.லி/லிட்டர் (ஏக்கருக்கு 200 மி.லி) நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 200.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Often confused with early blight. Difenoconazole-based combinations provide dual control for both target spot and early blight.",
+        "expert_advice_ta": "இந்நோய் ஆரம்பக்கால கருகல் போன்றே தோன்றும்; டைபினோகொனசோல் மருந்து இரண்டையும் கட்டுப்படுத்தும்.",
+        "source_title": "University of Florida IFAS Extension - Target Spot Guide",
+        "source_org": "UF/IFAS Extension & TNAU",
+        "reference": "UF/IFAS Vegetable IPM & TNAU Crop Protection",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_yellow_leaf_curl": {
+        "id": "tomato_yellow_leaf_curl",
+        "crop_id": "tomato",
+        "name_en": "Tomato Yellow Leaf Curl Virus (TYLCV)",
+        "name_ta": "தக்காளி மஞ்சள் இலை சுருள் வைரஸ் நோய்",
+        "name_hi": "टमाटर का पीली पत्ती मरोड़िया वायरस रोग",
+        "pathogen": "Tomato Yellow Leaf Curl Geminivirus (Vector: Bemisia tabaci / Whitefly)",
+        "symptoms_en": [
+            "Severe upward cupping and curling of leaf margins, reduced leaf size, and severe interveinal chlorosis (yellowing).",
+            "Extreme stunting of infected plants with a bushy, erect, stunted habit.",
+            "Flower bud drop; plants infected before flowering set almost no fruit."
+        ],
+        "symptoms_ta": [
+            "இலைகளின் விளிம்புகள் மேல்நோக்கி சுருண்டு கிண்ணம் போல் மாறும்; இலைகள் சிறியதாகி மஞ்சள் நிறமாகும்.",
+            "செடி வளர்ச்சி குன்றி குட்டையாக புதர் போன்று காணப்படும்.",
+            "பூக்கள் உதிர்ந்து விடும்; காய் பிடிப்பு முற்றிலும் நின்றுவிடும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियां ऊपर की ओर मुड़कर कटोरी जैसी हो जाती हैं, छोटी व पीली पड़ जाती हैं।",
+            "पौधों की बढ़वार रुक जाती है और झाड़ीनुमा हो जाते हैं।",
+            "फूल झड़ जाते हैं और फल नहीं लगते।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, dry weather (>28°C) that triggers population explosions of the whitefly vector (Bemisia tabaci).",
+            "description_ta": "வெப்பமான வறண்ட வானிலை மற்றும் வெள்ளை ஈ பூச்சிகளின் பெருக்கம்."
+        },
+        "prevention_en": [
+            "Grow nursery seedlings under 40-mesh insect-proof nylon net to prevent early whitefly transmission.",
+            "Install yellow sticky traps (15-20 traps/acre) at canopy height to capture whitefly vectors.",
+            "Plant barrier crops (2-3 rows of maize or sorghum) around tomato plots to filter wind-blown whiteflies.",
+            "Uproot and bury infected plants immediately to eliminate viral inoculum."
+        ],
+        "prevention_ta": [
+            "நாற்றங்காலில் 40-மெஷ் நைலான் வலை அமைத்து வெள்ளை ஈ புகாமல் நாற்றுகளை வளர்க்கவும்.",
+            "மஞ்சள் நிற ஒட்டும் பொறிகளை ஏக்கருக்கு 15-20 என்ற எண்ணிக்கையில் வைக்கவும்.",
+            "வயலைச் சுற்றி 3 வரிசை மக்காச்சோளம் அல்லது சோளம் பயிரிட்டு வரப்பு பயிராக வளர்க்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of 5% Neem Seed Kernel Extract (NSKE) or Neem oil @ 5 ml/L + 0.1% soap solution.",
+            "Chemical Vector Suppression (TNAU / CIBRC): Apply Thiamethoxam 25% WG @ 0.3 g/L (60 g/acre) or Pyriproxyfen 10% EC @ 1.5 ml/L or Dinotefuran 20% SG @ 0.5 g/L.",
+            "There is no direct chemical cure for the virus itself; whitefly management is the only defense."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: 5% வேப்பங்கொட்டை சாறு அல்லது வேப்பெண்ணெய் 5 மி.லி/லிட்டர் தெளித்து வெள்ளை ஈக்களை விரட்டவும்.",
+            "வெள்ளை ஈ கட்டுப்பாடு (TNAU): தயாமெத்தாக்சாம் 25% WG ஏக்கருக்கு 60 கிராம் (0.3 கிராம்/லிட்டர்) அல்லது பைரிபிராக்சிபேன் 1.5 மி.லி/லிட்டர் நீரில் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 60.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "TYLCV has no cure. Protecting seedlings in the first 30 days is the single most critical factor for a profitable crop.",
+        "expert_advice_ta": "வைரஸ் நோயை மருந்துகளால் குணப்படுத்த முடியாது; முதல் 30 நாட்கள் வெள்ளை ஈ வராமல் காப்பதே முழுமையான பலன் தரும்.",
+        "source_title": "TNAU Agritech Portal - Tomato Whitefly & TYLCV Advisory",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Tomato IPM Guidelines & ICAR-IIVR",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_mosaic_virus": {
+        "id": "tomato_mosaic_virus",
+        "crop_id": "tomato",
+        "name_en": "Tomato Mosaic Virus (ToMV)",
+        "name_ta": "தக்காளி மொசைக் வைரஸ் நோய்",
+        "name_hi": "टमाटर का मोज़ेक वायरस रोग",
+        "pathogen": "Tomato Mosaic Tobamovirus (ToMV - Highly Stable Contact-Transmitted Virus)",
+        "symptoms_en": [
+            "Mottling of leaves with alternating light green and dark green patches (mosaic pattern).",
+            "Leaf distortion, blistering, and 'shoestring' or fern-like thinning of leaflets.",
+            "Internal brown necrosis (browning of the vascular tissue) inside mature fruit."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் வெளிர் பச்சை மற்றும் அடர்பச்சை நிற திட்டுகள் (மொசைக் கோலங்கள்) தோன்றும்.",
+            "இலைகள் மெலிந்து கயிறு போன்றோ அல்லது பன்னீர்ப்பூ இலை போன்றோ உருமாறும்.",
+            "பழங்களின் உட்பகுதியில் பழுப்பு நிற நரம்புகள் தடித்து தரமிழக்கும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर हल्के और गहरे हरे रंग के चितकबरे धब्बे (मोज़ेक) बनते हैं।",
+            "पत्तियां पतली होकर धागे जैसी मुड़ जाती हैं और फल अंदर से भूरे पड़ जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "High crop handling, mechanical grafting, smoking/chewing tobacco near field, and contaminated pruning tools.",
+            "description_ta": "கவாத்து செய்தல் மற்றும் கைகளால் செடிகளை தொடுதல் மூலமும், புகையிலைப் பயன்பாடு மூலமும் பரவும்."
+        },
+        "prevention_en": [
+            "Disinfect seed in 10% Trisodium Phosphate (TSP) solution for 30 minutes before sowing.",
+            "Workers must wash hands with soap or 20% non-fat dry milk before handling seedlings.",
+            "Strictly prohibit smoking or using tobacco products inside tomato plots.",
+            "Immediately roguer and burn symptomatic mosaic plants."
+        ],
+        "prevention_ta": [
+            "விதை நேர்த்திக்கு 10% டிரைசோடியம் பாஸ்பேட் கரைசலில் 30 நிமிடங்கள் ஊற வைக்கவும்.",
+            "செடிகளைத் தொடுவதற்கு முன் கைகளை சோப்பு அல்லது பாலில் கழுவி கிருமி நீக்கம் செய்யவும்.",
+            "வயலில் புகையிலைப் பொருட்களை பயன்படுத்தக் கூடாது."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of diluted raw milk (10% milk in water) to inhibit mechanical contact transmission.",
+            "No chemical pesticide or fungicide can cure or control a plant virus.",
+            "Focus entirely on strict field sanitation, rogueing infected plants, and hand washing."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: 10% காய்ச்சாத பசும்பால் கரைசலை இலைகளில் தெளிப்பது தொடுதல் மூலம் வைரஸ் பரவுவதைத் தடுக்கும்.",
+            "வைரஸ் நோய்க்கு ரசாயன மருந்துகள் கிடையாது; பாதிக்கப்பட்ட செடிகளை பிடுங்கி அழிப்பதே வழி."
+        ],
+        "organic_rate_kg_per_acre": 2.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "ToMV is extremely stable and easily spread by hands and pruning clippers. Sanitation is the only defense.",
+        "expert_advice_ta": "இந்நோய் கைகள் மற்றும் கவாத்து கத்தரிக்கோல் மூலமாகவே அதிகம் பரவுகிறது; தூய்மை ஒன்றே தீர்வு.",
+        "source_title": "TNAU Agritech Portal - Tomato Virology Guide",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Virology Bulletin & ICAR-IIVR",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "tomato_healthy": {
+        "id": "tomato_healthy",
+        "crop_id": "tomato",
+        "name_en": "Healthy Tomato Foliage",
+        "name_ta": "ஆரோக்கியமான தக்காளி இலை",
+        "name_hi": "स्वस्थ टमाटर की पत्ती",
+        "pathogen": "None (Plant is healthy)",
+        "symptoms_en": [
+            "Vibrant, deep-green, vigorous foliage without chlorotic spots, necrosis, curling, or mildew.",
+            "Sturdy stems, active vegetative growth, healthy blossom clusters, and smooth expanding fruit."
+        ],
+        "symptoms_ta": [
+            "கருகல், சுருட்டல் அல்லது புள்ளிகள் இல்லாத பசுமையான அடர்பச்சை இலைகள்.",
+            "ஆரோக்கியமான தண்டு, மலர்க் கொத்துக்கள் மற்றும் செழிப்பான காய் வளர்ச்சி."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ, हरी पत्तियां बिना किसी रोग के लक्षण।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Optimal temperatures (21-27°C) with full sunlight, well-drained fertile loam, and balanced drip fertigation.",
+            "description_ta": "மிதமான வெப்பம், நல்ல சூரிய ஒளி மற்றும் சீரான சொட்டுநீர்ப் பாசனம்."
+        },
+        "prevention_en": [
+            "Maintain balanced NPK fertigation (150:100:50 kg/ha split over the growing season).",
+            "Scout twice weekly for early signs of leaf miner, whitefly, and pinworm.",
+            "Prune bottom suckers touching the soil to maintain airflow."
+        ],
+        "prevention_ta": [
+            "பரிந்துரைக்கப்பட்ட உரங்களை பிரித்து இடவும்; வாரம் இருமுறை பூச்சிகள் உள்ளதா என கண்காணிக்கவும்."
+        ],
+        "management_en": [
+            "No chemical fungicides needed. Continue routine irrigation, fertigation, and staking."
+        ],
+        "management_ta": [
+            "ரசாயன மருந்துகள் தேவையில்லை. வழக்கமான பாசனம் மற்றும் சீரான பராமரிப்பை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Plant is vigorous and healthy. Ensure balanced potash and calcium to prevent blossom end rot in developing fruit.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. காய்களில் அடி அழுகல் வராமல் தடுக்க போதிய கால்சியம் மற்றும் பொட்டாஷ் இடவும்.",
+        "source_title": "TNAU Tomato Production Guide",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Agritech Portal",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    # -------------------------------------------------------------
+    # EXISTING NON-PLANTVILLAGE CROPS (Retained for system integrity)
+    # -------------------------------------------------------------
+    "rice_blast": {
+        "id": "rice_blast",
+        "crop_id": "rice",
+        "name_en": "Rice Blast Disease",
+        "name_ta": "நெல் குலை நோய்",
+        "name_hi": "धान का झुलसा रोग (ब्लास्ट)",
+        "pathogen": "Magnaporthe oryzae (Fungus)",
+        "symptoms_en": [
+            "Spindle-shaped elliptical lesions with pointed ends on leaves, centers gray or white with brown margins.",
+            "Lesions coalesce, causing entire leaf blades to dry and wither.",
+            "Neck blast causes blackening of neck node and incomplete grain filling with unfilled chaffy panicles."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் இரு முனைகளும் கூர்மையான கண் போன்ற அல்லது கதிர் போன்ற புள்ளிகள் தோன்றும் (நடுவில் சாம்பல், விளிம்பில் பழுப்பு).",
+            "கழுத்து குலை நோயால் கதிர் காம்பு கருப்பாகி கதிர்கள் சாய்ந்து தானியங்கள் பதராகும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर आंख के आकार के धब्बे बनते हैं (बीच में धूसर, किनारे भूरे)।",
+            "गर्दन झुलसा होने पर बालियां काली पड़कर टूट जाती हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Moderate temperatures (20-25°C), high humidity (>90%), night dew, and excessive nitrogen application.",
+            "description_ta": "மிதமான வெப்பநிலை (20-25°C), இரவு பனி மற்றும் அதிக தழைச்சத்து இடுதல்."
+        },
+        "prevention_en": [
+            "Avoid excessive nitrogen fertilizer application; split into 3-4 doses.",
+            "Treat seeds with Pseudomonas fluorescens @ 10 g/kg or Carbendazim @ 2 g/kg seed.",
+            "Maintain standing water in field during tillering to reduce blast susceptibility."
+        ],
+        "prevention_ta": [
+            "அதிக தழைச்சத்து (யூரியா) இடுவதைத் தவிர்க்கவும்; பிரித்து இடவும்.",
+            "விதை நேர்த்திக்கு சூடோமோனாஸ் 10 கிராம்/கிலோ பயன்படுத்தவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of Pseudomonas fluorescens @ 5 g/litre at tillering and boot leaf stages.",
+            "Chemical IPM (TNAU): Spray Tricyclazole 75% WP @ 1 g/litre (200 g/acre) or Azoxystrobin 25% SC @ 1 ml/litre at early symptom appearance."
+        ],
+        "management_ta": [
+            "உயிர் கட்டுப்பாடு: சூடோமோனாஸ் 5 கிராம்/லிட்டர் நீரில் கலந்து தூர்க்கட்டும் மற்றும் பால் பிடிக்கும் பருவத்தில் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): டிரைசைக்ளசோல் 75% WP ஏக்கருக்கு 200 கிராம் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 200.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Tricyclazole application at late boot stage provides excellent protection against neck blast.",
+        "expert_advice_ta": "கதிர் வெளிவரும் தருணத்தில் டிரைசைக்ளசோல் தெளிப்பது கழுத்து குலை நோயைத் தடுக்கும்.",
+        "source_title": "TNAU Agritech Portal - Rice Protection Manual",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Agritech Portal & ICAR-NRRI Cuttack",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "rice_brown_spot": {
+        "id": "rice_brown_spot",
+        "crop_id": "rice",
+        "name_en": "Rice Brown Spot",
+        "name_ta": "நெல் பழுப்பு இலைப்புள்ளி நோய்",
+        "name_hi": "धान का भूरा धब्बा रोग",
+        "pathogen": "Bipolaris oryzae (Fungus)",
+        "symptoms_en": [
+            "Small, oval to circular dark brown spots resembling sesame seeds on leaves and glumes.",
+            "Mature lesions develop light brown to gray centers with reddish-brown margins and yellow halos.",
+            "Severe infection on panicles causes discolored grains and poor germination."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் எள் போன்ற சிறிய பழுப்பு நிற புள்ளிகள் தோன்றும்.",
+            "புள்ளிகளைச் சுற்றி மஞ்சள் வளையம் காணப்படும்; கதிர்களில் உள்ள தானியங்கள் பழுப்பு நிறமாக மாறும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर तिल के आकार के गोल भूरे धब्बे बनते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Poor soil fertility, potassium deficiency, zinc deficiency, and drought or water stress.",
+            "description_ta": "மண் வளம் குறைதல், சாம்பல் மற்றும் துத்தநாக சத்து பற்றாக்குறை."
+        },
+        "prevention_en": [
+            "Apply balanced NPK with recommended potassium (MOP) to prevent nutritional predisposition.",
+            "Apply Zinc Sulphate @ 25 kg/ha as basal dressing.",
+            "Ensure regular irrigation and avoid drying of paddy soils."
+        ],
+        "prevention_ta": [
+            "மண்ணிற்கு தேவையான சாம்பல் சத்து மற்றும் துத்தநாக சல்பேட் 25 கிலோ/ஹெக்டர் இடவும்."
+        ],
+        "management_en": [
+            "Bio-control: Seed treatment and foliar spray of Pseudomonas fluorescens @ 5 g/litre.",
+            "Chemical IPM (TNAU): Spray Mancozeb 75% WP @ 2 g/litre (400-500 g/acre) or Propiconazole 25% EC @ 1 ml/litre."
+        ],
+        "management_ta": [
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): மேன்கோசெப் 75% WP ஏக்கருக்கு 400 கிராம் அல்லது புரோபிகோனசோல் 1 மி.லி/லிட்டர் தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 400.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Brown spot is an indicator of poor soil nutrition. Correct potassium and zinc deficiency alongside fungicide application.",
+        "expert_advice_ta": "இந்நோய் மண் ஊட்டச்சத்துக் குறைபாட்டின் அறிகுறியாகும்; சாம்பல் மற்றும் துத்தநாக உரங்களை இடவும்.",
+        "source_title": "TNAU Agritech Portal - Rice Diseases",
+        "source_org": "Tamil Nadu Agricultural University (TNAU)",
+        "reference": "TNAU Agritech Portal & ICAR-NRRI",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "rice_healthy": {
+        "id": "rice_healthy",
+        "crop_id": "rice",
+        "name_en": "Healthy Rice Crop",
+        "name_ta": "ஆரோக்கியமான நெல் பயிர்",
+        "name_hi": "स्वस्थ धान की फसल",
+        "pathogen": "None (Plant is healthy)",
+        "symptoms_en": [
+            "Uniform green tillers with erect leaves and clean leaf sheaths.",
+            "No spindle lesions, brown spots, or leaf blast symptoms."
+        ],
+        "symptoms_ta": [
+            "புள்ளிகள் அல்லது கருகல் இல்லாத சீரான பச்சை நிற தூர்கள் மற்றும் இலைகள்."
+        ],
+        "symptoms_hi": [
+            "स्वच्छ और स्वस्थ धान की फसल।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Adequate standing water (2-5 cm), balanced split application of fertilizers, and warm sunshine.",
+            "description_ta": "போதுமான நீர் மட்டம் (2-5 செ.மீ) மற்றும் சீரான தழைச்சத்து."
+        },
+        "prevention_en": [
+            "Maintain water depth at 2-5 cm during active tillering to panicle initiation.",
+            "Top-dress Urea and MOP as per growth stages (tillering, panicle initiation).",
+            "Scout for stem borer and leaf folder weekly."
+        ],
+        "prevention_ta": [
+            "வழக்கமான பாசனம் மற்றும் பரிந்துரைக்கப்பட்ட உரமிடுதலை தொடரவும்."
+        ],
+        "management_en": [
+            "No chemical intervention required. Continue routine irrigation and nutrient management."
+        ],
+        "management_ta": [
+            "ரசாயன மருந்துகள் தேவையில்லை. வழக்கமான பாசனத்தை தொடரவும்."
+        ],
+        "organic_rate_kg_per_acre": 0.0,
+        "chemical_grams_per_acre": 0.0,
+        "water_litres_per_acre": 0,
+        "expert_advice_en": "Crop is healthy. Ensure adequate water during flowering to avoid unfilled grains.",
+        "expert_advice_ta": "பயிர் ஆரோக்கியமாக உள்ளது. பால் பிடிக்கும் பருவத்தில் நிலம் காயாமல் பார்த்துக் கொள்ளவும்.",
+        "source_title": "TNAU Rice Production Guide",
+        "source_org": "TNAU",
+        "reference": "TNAU Agritech Portal",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "cotton_bacterial_blight": {
+        "id": "cotton_bacterial_blight",
+        "crop_id": "cotton",
+        "name_en": "Cotton Bacterial Blight (Angular Leaf Spot)",
+        "name_ta": "பருத்தி பாக்டீரியா இலைக்கருகல் / கோண இலைப்புள்ளி நோய்",
+        "name_hi": "कपास का जीवाणु झुलसा रोग",
+        "pathogen": "Xanthomonas citri pv. malvacearum (Bacterium)",
+        "symptoms_en": [
+            "Angular water-soaked spots bounded by leaf veinlets on foliage.",
+            "Spots turn dark reddish-brown to black and lesions spread along main veins (vein blight).",
+            "Black arm symptoms on stems causing branches to snap; dark water-soaked round lesions on bolls."
+        ],
+        "symptoms_ta": [
+            "இலை நரம்புகளுக்கு இடையே நீர் ஊறிய கோண வடிவ புள்ளிகள் தோன்றும்.",
+            "புள்ளிகள் கரும்பழுப்பு நிறமாக மாறி நரம்புகளின் வழியே பரவும் (நரம்பு கருகல்).",
+            "தண்டுகளில் கருப்பு காயம் (Black arm) ஏற்பட்டு கிளைகள் முறியும்; காய்களில் அழுகல் ஏற்படும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों की नसों के बीच कोणीय जलसिक्त धब्बे बनते हैं।",
+            "टहनियों पर काले घाव (ब्लैक आर्म) बनते हैं और गूलर सड़ जाते हैं।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm temperatures (30-35°C), high humidity (>85%), wind-driven rain, and cloudy weather.",
+            "description_ta": "அதிக வெப்பநிலை (30-35°C) மற்றும் காற்றுடன் கூடிய மழை."
+        },
+        "prevention_en": [
+            "Acid delinting of cotton seed with commercial sulfuric acid (100 ml/kg seed) destroys seed-borne bacteria.",
+            "Treat delinted seed with Streptocycline @ 1 g/litre or Carboxin.",
+            "Burn infected crop residue after picking."
+        ],
+        "prevention_ta": [
+            "அமில விதை நேர்த்தி செய்யப்பட்ட சான்றளிக்கப்பட்ட விதைகளைப் பயன்படுத்தவும்.",
+            "அறுவடைக்கு பின் முந்தைய பயிர்க் கழிவுகளை எரிக்கவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar application of Pseudomonas fluorescens @ 5 g/litre.",
+            "Chemical IPM (TNAU / ICAR-CICR): Spray Copper Oxychloride 50% WP @ 2.5 g/L (500 g/acre) + Streptocycline @ 0.1 g/L (20 g/acre) at first symptom appearance.",
+            "Repeat after 15 days if cloudy rainy weather persists."
+        ],
+        "management_ta": [
+            "பரிந்துரைக்கப்பட்ட மருந்து (TNAU / CICR): காப்பர் ஆக்சிகுளோரைடு 500 கிராம் + ஸ்ட்ரெப்டோசைக்ளின் 20 கிராம் ஏக்கருக்கு கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 520.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "If black arm stem lesions appear, avoid high-speed tractor inter-cultivation that can mechanically fracture infected stems.",
+        "expert_advice_ta": "தண்டுகளில் கருப்பு காயம் இருந்தால் கிளைகள் முறியாமல் கவனமாக கையாளுங்கள்.",
+        "source_title": "ICAR-Central Institute for Cotton Research (CICR) Nagpur Guide",
+        "source_org": "ICAR-CICR & TNAU",
+        "reference": "ICAR-CICR Cotton Pathology & TNAU Agritech",
+        "verification_status": "Verified - Agricultural University Standard"
+    },
+
+    "groundnut_tikka": {
+        "id": "groundnut_tikka",
+        "crop_id": "groundnut",
+        "name_en": "Groundnut Tikka Leaf Spot",
+        "name_ta": "நிலக்கடலை டிக்கா இலைப்புள்ளி நோய்",
+        "name_hi": "मूंगफली का टिक्का रोग",
+        "pathogen": "Cercospora arachidicola (Early) & Phaeoisariopsis personata (Late) (Fungi)",
+        "symptoms_en": [
+            "Early leaf spot: circular reddish-brown spots with prominent bright yellow halo on upper leaf surface.",
+            "Late leaf spot: smaller, nearly circular, dark brown to black spots with negligible yellow halo.",
+            "Severe infection causes extensive premature defoliation, leaving bare stems and reducing pod yield by up to 50%."
+        ],
+        "symptoms_ta": [
+            "இலைகளில் வட்ட வடிவ பழுப்பு நிற புள்ளிகள் சுற்றிலும் மஞ்சள் வளையத்துடன் தோன்றும் (டிக்கா நோய்).",
+            "தீவிர பாதிப்பில் இலைகள் முழுவதும் காய்ந்து உதிர்ந்து செடிகள் குச்சி போல் நிற்கும்; காய்களின் எடை குறையும்."
+        ],
+        "symptoms_hi": [
+            "पत्तियों पर पीले घेरे वाले गोल गहरे भूरे धब्बे बनते हैं।",
+            "पत्तियां तेजी से सूखकर गिर जाती हैं जिससे पैदावार आधी रह जाती है।"
+        ],
+        "favorable_conditions": {
+            "description_en": "Warm, humid weather (25-30°C) with prolonged relative humidity (>80%) and persistent dew.",
+            "description_ta": "மிதமான வெப்பம் (25-30°C) மற்றும் அதிக காற்றில் ஈரப்பதம்."
+        },
+        "prevention_en": [
+            "Treat seeds with Trichoderma viride @ 4 g/kg or Mancozeb @ 2 g/kg seed before sowing.",
+            "Rotate groundnut with non-leguminous crops like sorghum or pearl millet.",
+            "Practice deep summer plowing to bury infected debris."
+        ],
+        "prevention_ta": [
+            "விதை நேர்த்திக்கு டிரைக்கோடெர்மா 4 கிராம்/கிலோ அல்லது மேன்கோசெப் 2 கிராம்/கிலோ பயன்படுத்தவும்.",
+            "சோளம் அல்லது கம்பு பயிருடன் பயிர் சுழற்சி செய்யவும்."
+        ],
+        "management_en": [
+            "Bio-control: Foliar spray of 5% Neem Seed Kernel Extract (NSKE) or Pseudomonas fluorescens @ 5 g/litre.",
+            "Chemical IPM (TNAU / ICAR-DGR): Spray Mancozeb 75% WP @ 2.0 g/litre (400-500 g/acre) or Carbendazim 50% WP @ 1.0 g/litre (200 g/acre) or Tebuconazole 25.9% EC @ 1 ml/litre at first appearance of spots.",
+            "Repeat at 15-day intervals."
+        ],
+        "management_ta": [
+            "இயற்கை வழி: 5% வேப்பங்கொட்டை சாறு அல்லது சூடோமோனாஸ் 5 கிராம்/லிட்டர் தெளிக்கவும்.",
+            "பரிந்துரைக்கப்பட்ட பூஞ்சைக்கொல்லி (TNAU): மேன்கோசெப் 75% WP ஏக்கருக்கு 400 கிராம் அல்லது கார்பன்டசிம் 200 கிராம் கலந்து தெளிக்கவும்."
+        ],
+        "organic_rate_kg_per_acre": 1.0,
+        "chemical_grams_per_acre": 400.0,
+        "water_litres_per_acre": 200,
+        "expert_advice_en": "Start spraying when lower leaves show first spotting around 35-40 days after sowing. Protect leaves to ensure pod filling.",
+        "expert_advice_ta": "விதைத்த 35-40 நாட்களில் கீழ் இலைகளில் புள்ளிகள் தோன்றிய உடனே முதல் தெளிப்பை மேற்கொள்ளவும்.",
+        "source_title": "ICAR-Directorate of Groundnut Research (DGR) Junagadh",
+        "source_org": "ICAR-DGR & TNAU Agritech",
+        "reference": "ICAR-DGR Groundnut Protection Compendium & TNAU",
+        "verification_status": "Verified - Agricultural University Standard"
+    }
+}
